@@ -5,8 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Produkt side</title>
 </head>
-<body>
-    
+<body>  
     <header>
         <!--Global navigasjons meny til de forskjellige sidene, inkluderer checkout, produkt sider etc.-->
         <nav>
@@ -20,7 +19,6 @@
                 <li><a href="checkout.html">Handlekurv</a></li>
             </ul>
         </nav>
-
         <!--Søkefelt-->
         <form action="#" method="get">
             <label for="search">Søk</label>
@@ -28,16 +26,109 @@
             <button type="submit">Søk</button>
         </form>
     </header>
-
-
-    <!--Brødsmulesti-->
-    
-
-
-    
-    
+    <!--Brødsmulesti--> 
+    <nav>
+        <ol>
+            <li><a href="index.html">Hjem</a></li>
+            <li><a href="categories.html">Kategorier</a></li>
+            <li><span>Produktnavn</span></li>
+        </ol>
+    </nav>
+    <!--Hovedinnhold-->
+    <main>
+        <section>
+                <figure>
+                    <img src="#" alt="Stort bilde">
+                </figure>
+                <figure>
+                    <img src="#" alt="Lite bilde">
+                </figure>
+                <figure>
+                    <img src="#" alt="Lite bilde">
+                </figure>
+                <figure>
+                    <img src="#" alt="lite bilde">
+                </figure>
+        </section>
+            <!--Produktinfo-->
+        <section>
+            <article>
+                <h1>Produktnavn</h1>
+                <p><a href="#">Merkenavn</a></p>
+                <p> 999 kr</p>
+                <p>Farge: svart</p>
+            </article>
+            <!--Størrelse-->
+            <label for="size">størrelse</label>
+            <select name="size" id="size">
+                <option value="S">S</option>
+                <option value="M">M</option>
+                <option value="L">L</option>
+                <option value="XL">XL</option>
+            </select>
+            <!--Handlekurvs knapp-->
+            <form action="checkout.html" method="post">
+                <button type="submit">Legg i Handlekurv</button>
+            </form>
+        </section>
+        <!-- Relaterte produkter seksjon -->   
+        <section>
+            <h2>Relaterte produkter</h2>
+            <article>
+                <img src="#" alt="#">
+                <h3>Produktnavn 1</h3>
+                <p>Pris: 199 kr</p>
+                <a href="#">Se detaljer</a>
+            </article>
+            <article>
+                <img src="#" alt="#">
+                <h3>Produktnavn 2</h3>
+                <p>Pris: 199 kr</p>
+                <a href="#">Se detaljer</a>
+            </article>
+            <article>
+                <img src="#" alt="#">
+                <h3>Produktnavn 3</h3>
+                <p>Pris: 199 kr</p>
+                <a href="#">Se detaljer</a>
+            </article>
+            <article>
+                <img src="#" alt="#">
+                <h3>Produktnavn 1</h3>
+                <p>Pris: 199 kr</p>
+                <a href="#">Se detaljer</a>
+            </article>      
+        </section>      
+    </main>     
     <footer id="footer-contact">
-    
+        <!-- Seksjon 1 Logo/ingress-->
+        <section>
+            <h3>Nettbutikk Logo</h3>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit</p>
+        </section>
+        <!-- Seksjon 2 Kontaktinfo-->
+        <section>
+            <h3>Kontakt</h3>
+            <p>Adresse: Gate 123 0977 Haugenstua</p>
+            <p>Telefon: +47 90 20 30 13</p>
+            <p>Email: Kontakt@Haugenstua.no</p>
+        </section> 
+        <!-- Seksjon 3 Snarveier -->
+        <section>
+            <h3>Snarveier</h3>
+                <a href="index.html">Hjem</a> 
+               <a href="#popular-products">Produkter</a> 
+               <a href="#popular-categories">Kategorier</a> 
+               <a href="#footer-contact">Kontakt oss</a>
+        </section>
+        <!-- Seksjon 4 Sosiale medier -->
+        <section>
+            <h3>Sosiale medier</h3>
+                <a href="https://instagram.com">Instagram</a> 
+                <a href="https://facebook.com">Facebook</a> 
+                <a href="https://linkedin.com">LinkedIn</a> 
+                <a href="https://pinterest.com">Pinterest</a>
+        </section>
     </footer>
 
 
