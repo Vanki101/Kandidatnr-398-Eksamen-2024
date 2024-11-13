@@ -6,7 +6,6 @@
     <title>handlekurv side</title>
 </head>
 <body>
- 
     <header>
         <!--Global navigasjons meny til de forskjellige sidene, inkluderer checkout, produkt sider etc.-->
         <nav>
@@ -18,20 +17,102 @@
                 <li><a href="index.html#popular-categories">Kategorier</a></li>
                 <li><a href="index.html#footer-contact">Kontakt oss</a></li>
                 <li><a href="checkout.html">Handlekurv</a></li>
-            </ul>
-        </nav>
-
-        <!--Søkefelt-->
-        <form action="#" method="get">
-            <label for="search">Søk</label>
+            </ul>   
+        </nav>  
+        <!--Søkefelt--> 
+        <form action="#" method="get">      
+            <label for="search">Søk</label> 
             <input  type="text" id="search" name="search" placeholder="Søk her">
             <button type="submit">Søk</button>
         </form>
     </header>
-    
-    
+    <main>
+        <h1>Handlekurv</h1>
+        <!-- Shoppingbag -->
+         <section>
+            <h2>Shoppingbag</h2>
+            <!-- Produktkort 1 -->
+             <article>
+                <img src="#" alt="Bilde produkt 1">
+                <h3>Produktnavn</h3>
+                <p>Farge: svart</p>
+                <p>Pris: 1599,-</p>
+             </article> 
+           <!-- Produktkort 2 -->
+           <article>
+            <img src="#" alt="Bilde produkt 2">
+            <h3>Produktnavn</h3>
+            <p>Farge: svart</p>
+            <p>Pris: 1599,-</p>
+         </article> 
+     </section> 
+
+     <!-- Seksjon 2: personopplysninger -->
+      <section>
+            <h2>Personopplysninger</h2>
+            <form action="#" method="post">
+                <!--Fornavn-->
+                <label for="first-name">Fornavn</label>
+                <input type="text" id="first-name" name="first-name" required>
+                <!--Etternavn-->
+                <label for="last-name">Etternavn</label>
+                <input type="text" id="last-name" name="last-name" required>
+                <!--Adresse-->
+                <label for="adresse">Adresse</label>
+                <input type="text" id="adresse" name="adresse" required>
+                <!--Postnummer-->
+                <label for="postal-code">Postnummer</label>
+                <input type="text" id="postal-code" name="postal-code" required pattern="\d{4}" title="Postnummer må være 4 siffer">
+                <!--Poststed-->
+                <label for="city">Poststed</label>
+                <input type="text" id="city" name="city" required>
+                <!--Knapper-->
+                <button type="submit">Lagre</button>
+                <button type="reset">Avbryt</button>
+            
+            
+
+
+
+
+
+
+
+            </form>
+      </section>
+    </main> 
+
+
+
     <footer id="footer-contact">
-    
+        <!-- Seksjon 1 Logo/ingress-->
+        <section>
+            <h3>Nettbutikk Logo</h3>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit</p>
+        </section>
+        <!-- Seksjon 2 Kontaktinfo-->
+        <section>
+            <h3>Kontakt</h3>
+            <p>Adresse: Gate 123 0977 Haugenstua</p>
+            <p>Telefon: +47 90 20 30 13</p>
+            <p>Email: Kontakt@Haugenstua.no</p>
+        </section> 
+        <!-- Seksjon 3 Snarveier -->
+        <section>
+            <h3>Snarveier</h3>
+                <a href="index.html">Hjem</a> 
+               <a href="#popular-products">Produkter</a> 
+               <a href="#popular-categories">Kategorier</a> 
+               <a href="#footer-contact">Kontakt oss</a>
+        </section>
+        <!-- Seksjon 4 Sosiale medier -->
+        <section>
+            <h3>Sosiale medier</h3>
+                <a href="https://instagram.com">Instagram</a> 
+                <a href="https://facebook.com">Facebook</a> 
+                <a href="https://linkedin.com">LinkedIn</a> 
+                <a href="https://pinterest.com">Pinterest</a>
+        </section>
     </footer>
 
 
