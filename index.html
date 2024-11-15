@@ -1,12 +1,15 @@
 <!DOCTYPE html>
 <html lang="no">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Forsiden</title>
+    <link rel="stylesheet" href="css/style.css">
 </head>
-<body>
 
+<body>
+    <!-- Lage en DIV med class /flex gridd -->
     <header>
         <!--Global navigasjons meny til de forskjellige sidene, inkluderer checkout, produkt sider etc.-->
         <nav>
@@ -20,50 +23,46 @@
                 <li><a href="checkout.html">Handlekurv</a></li>
             </ul>
         </nav>
-
         <!--Søkefelt-->
         <form action="#" method="get">
             <label for="search">Søk</label>
-            <input  type="text" id="search" name="search" placeholder="Søk her">
+            <input type="text" id="search" name="search" placeholder="Søk her">
             <button type="submit">Søk</button>
         </form>
     </header>
-
     <main>
-
         <!--Banner seksjon 1-->
         <section id="banner">
             <!--Oversrkfit-->
             <h1> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed hendrerit vulputate lobortis.</h1>
             <!--Ingress-->
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed hendrerit vulputate lobortis. Mauris feugiat, neque hendrerit scelerisque imperdiet.</p>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed hendrerit vulputate lobortis. Mauris
+                feugiat, neque hendrerit scelerisque imperdiet.</p>
             <!--Lenke som skal fungere som en handlings knapp-->
             <a href="#">LES MER </a>
-        </section>     
-
+        </section>
         <!--Våre mest populære produkter seksjon 2-->
         <section id="popular-products">
             <!--Overskrift-->
             <h2> Våre mest populære produkter</h2>
             <!--ingress-->
             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit</p>
-
             <!--Filtreringsknappen-->
             <nav>
                 <ul>
-                    <li><button type="button">Alle</button></li>
-                    <li><button type="button">Nye</button></li>
-                    <li><button type="button">Tilbud</button></li>
+                    <li><a href="#">Alle</a></li>
+                    <li><a href="#">Nye</a></li>
+                    <li><a href="#">Tilbud</a></li>
                 </ul>
             </nav>
             <!--6 produktkort-->
             <!--Produkt 1-->
             <article>
-                <img src="" alt="Produktbilde">
+                <img src="#" alt="Produktbilde">
                 <h3>Produktnavn</h3>
                 <p>Pris: 999,-</p>
             </article>
-             <!--Produkt 2-->
+            <!--Produkt 2-->
             <article>
                 <img src="#" alt="Produktbilde">
                 <h3>Produktnavn</h3>
@@ -94,14 +93,12 @@
                 <p>Pris: 999,-</p>
             </article>
         </section>
-
         <!--Populære katerogier seksjon 3-->
         <section id="popular-categories">
             <!--Overskrift-->
             <h2>Våre mest populære kategorier</h2>
             <!--Ingress-->
             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit</p>
-        
             <!--Kategorikort-->
             <article>
                 <h3>Kategori 1</h3>
@@ -119,12 +116,10 @@
                 <h3>Kategori 5</h3>
             </article>
         </section>
-
         <!--Anmeldelser Seksjon 4-->
         <section id="reviews">
             <!--Overskrift-->
             <h2>Anmeldelser</h2>
-
             <!--Anmeldelse 1-->
             <article>
                 <img src="#" alt="Profilbilde">
@@ -151,15 +146,12 @@
             </article>
         </section>
     </main>
-
     <footer id="footer-contact">
         <!-- Seksjon 1 Logo/ingress-->
         <section>
             <h3>Nettbutikk Logo</h3>
             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit</p>
         </section>
-        
-        
         <!-- Seksjon 2 Kontaktinfo-->
         <section>
             <h3>Kontakt</h3>
@@ -167,33 +159,28 @@
             <p>Telefon: +47 90 20 30 13</p>
             <p>Email: Kontakt@Haugenstua.no</p>
         </section>
-
-        
-          <!-- Seksjon 3: Snarveier -->
+        <!-- Seksjon 3 Snarveier -->
         <section>
             <h3>Snarveier</h3>
-            <nav>
-                <ul>
-                    <li><a href="index.html">Hjem</a></li>
-                    <li><a href="#popular-products">Produkter</a></li>
-                    <li><a href="#popular-categories">Kategorier</a></li>
-                    <li><a href="#footer-contact">Kontakt oss</a></li>
-                </ul>
-            </nav>
+            <ul>
+                <li><a href="index.html">Hjem</a></li>
+                <li><a href="#popular-products">Produkter</a></li>
+                <li><a href="#popular-categories">Kategorier</a></li>
+                <li><a href="#footer-contact">Kontakt oss</a></li>
+            </ul>
         </section>
-
-        <!-- Seksjon 4: Sosiale medier -->
+        <!-- Seksjon 4 Sosiale medier -->
         <section>
             <h3>Sosiale medier</h3>
-            <nav>
-                <ul>
-                    <li><a href="https://www.instagram.com">Instagram</a></li>
-                    <li><a href="https://www.facebook.com">Facebook</a></li>
-                    <li><a href="https://www.linkedin.com">LinkedIn</a></li>
-                    <li><a href="https://www.pinterest.com">Pinterest</a></li>
-                </ul>
-            </nav>
+            <ul>
+                <li><a href="https://instagram.com">Instagram</a></li>
+                <li><a href="https://facebook.com">Facebook</a></li>
+                <li><a href="https://linkedin.com">LinkedIn</a></li>
+                <li><a href="https://pinterest.com">Pinterest</a></li>
+            </ul>
         </section>
+
     </footer>
 </body>
+
 </html>
