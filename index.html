@@ -6,180 +6,164 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Forsiden</title>
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="/fontawesome-free-6.7.0-web/css/all.css">
+    <link rel="stylesheet" href="/fontawesome-free-6.7.0-web/css/brands.css">
+    <link rel="stylesheet" href="/fontawesome-free-6.7.0-web/css/solid.css">
 </head>
-<body>
-    <div id="Grid-container">
-    <header class="global-header">
-               <!--Søkefelt-->
-               <form class="search-form" action="#" method="get">
-                <label for="search"></label>
-                <input type="text" id="search" name="search" placeholder="Søk her">
 
+<body>
+    <div class="container">
+        <!-- Header -->
+        <header class="global-header">
+            <!-- Search Form -->
+            <form class="search-form" action="#" method="get">
+                <label for="search">Søk</label>
+                <input type="text" id="search" name="search" placeholder="Søk her">
+                <button type="submit">Søk</button>
             </form>
-        <!--Global navigasjons meny til de forskjellige sidene, inkluderer checkout, produkt sider etc.-->
-        <nav class="nav">
-            <ul class="nav-list">
-                <li><a href="index.html">Hjem</a></li>
-                <li><a href="#popular-products">Produkter</a></li>
-                <!--Logo-->
-                <li><a href="index.html">Logo</a></li>
-                <li><a href="#popular-categories">Kategorier</a></li>
-                <li><a href="#footer-contact">Kontakt oss</a></li>
-                <li><a href="checkout.html">Handlekurv</a></li>
-            </ul>
-        </nav>
-    </header>
-    <main class="main-content-index">
-        <!--Banner seksjon 1-->
-        <section id="banner" class="banner">
-            <!--Oversrkfit-->
-            <h1> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed hendrerit vulputate lobortis.</h1>
-            <!--Ingress-->
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed hendrerit vulputate lobortis. Mauris
-                feugiat, neque hendrerit scelerisque imperdiet.</p>
-            <!--Lenke som skal fungere som en handlings knapp-->
-            <a href="#" class="banner-button">LES MER </a>
-        </section>
-        <!--Våre mest populære produkter seksjon 2-->
-        <section id="popular-products">
-            <!--Overskrift-->
-            <h2> Våre mest populære produkter</h2>
-            <!--ingress-->
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit</p>
-            <!--Filtreringsknappen-->
-            <nav class="filter-nav">
-                <ul class="filter-list">
-                    <li><a href="#" class="filter-button">Alle</a></li>
-                    <li><a href="#" class="filter-button">Nye</a></li>
-                    <li><a href="#" class="filter-button">Tilbud</a></li>
+            <!-- Navigation Menu -->
+            <nav class="nav">
+                <ul class="nav-list">
+                    <li><a href="index.html">Hjem</a></li>
+                    <li><a href="#popular-products">Produkter</a></li>
+                    <li><a href="index.html">Logo</a></li>
+                    <li><a href="#popular-categories">Kategorier</a></li>
+                    <li><a href="#footer-contact">Kontakt oss</a></li>
+                    <li><a href="checkout.html"><i class="fa-solid fa-cart-shopping"></i></a></li>
+                </ul>   
+                <ul class="icon-list">
+                    <li><a href="#"><img src="https://via.placeholder.com/24" alt="User Icon"></a></li>
+                    <li><a href="#"><img src="https://via.placeholder.com/24" alt="Heart Icon"></a></li>
+                    <li><a href="#"><img src="https://via.placeholder.com/24" alt="Cart Icon"></a></li>
                 </ul>
             </nav>
-            <!--6 produktkort-->
-            <!--Produkt 1-->
-            <article class="product-card">
-                <img src="Images/WomanProduktbilde.jpg" alt="Produktbilde">
-                <h3>Produktnavn</h3>
-                <p>Pris: 999,-</p>
-            </article>
-            <!--Produkt 2-->
-            <article class="product-card">
-                <img src="#" alt="Produktbilde">
-                <h3>Produktnavn</h3>
-                <p>Pris: 999,-</p>
-            </article>
-            <!--Produkt 3-->
-            <article class="product-card">
-                <img src="#" alt="Produktbilde">
-                <h3>Produktnavn</h3>
-                <p>Pris: 999,-</p>
-            </article>
-            <!--Produkt 4-->
-            <article class="product-card">
-                <img src="#" alt="Produktbilde">
-                <h3>Produktnavn</h3>
-                <p>Pris: 999,-</p>
-            </article>
-            <!--Produkt 5-->
-            <article class="product-card">
-                <img src="#" alt="Produktbilde">
-                <h3>Produktnavn</h3>
-                <p>Pris: 999,-</p>
-            </article>
-            <!--Produkt 6-->
-            <article class="product-card">
-                <img src="#" alt="Produktbilde">
-                <h3>Produktnavn</h3>
-                <p>Pris: 999,-</p>
-            </article>
-        </section>
-        <!--Populære katerogier seksjon 3-->
-        <section id="popular-categories" class="popular-categories">
-            <!--Overskrift-->
-            <h2>Våre mest populære kategorier</h2>
-            <!--Ingress-->
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit</p>
-            <!--Kategorikort-->
-            <article class="category-card">
-                <h3>Kategori 1</h3>
-            </article>
-            <article class="category-card">
-                <h3>Kategori 2</h3>
-            </article>
-            <article class="category-card">
-                <h3>Kategori 3</h3>
-            </article>
-            <article class="category-card">
-                <h3>Kategori 4</h3>
-            </article>
-            <article class="category-card">
-                <h3>Kategori 5</h3>
-            </article>
-        </section>
-        <!--Anmeldelser Seksjon 4-->
-        <section id="reviews" class="reviews">
-            <!--Overskrift-->
-            <h2>Anmeldelser</h2>
-            <!--Anmeldelse 1-->
-            <article class="review-card">
-                <img src="#" alt="Profilbilde">
-                <h3>Utrolig fornøyd!</h3>
+        </header>
+
+        <!-- Main Content -->
+        <main class="main-content-index">
+            <!-- Banner Section -->
+            <section id="banner" class="banner">
+                <h1>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed hendrerit vulputate lobortis.</h1>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed hendrerit vulputate lobortis. Mauris feugiat, neque hendrerit scelerisque imperdiet.</p>
+                <a href="#" class="banner-button">LES MER</a>
+            </section>
+
+            <!-- Popular Products Section -->
+            <section id="popular-products" class="popular-products">
+                <h2>Våre mest populære produkter</h2>
+                <p>Lorem ipsum dolor sit amet.</p>
+                <nav class="filter-nav">
+                    <ul class="filter-list">
+                        <li><a href="#" class="filter-button">Alle</a></li>
+                        <li><a href="#" class="filter-button">Nye</a></li>
+                        <li><a href="#" class="filter-button">Tilbud</a></li>
+                    </ul>
+                </nav>
+                <div class="product-grid">
+                    <article class="product-card">
+                        <img src="Images/WomanProduktbilde.jpg" alt="Produktbilde">
+                        <h3>Produktnavn</h3>
+                        <p>Pris: 999,-</p>
+                    </article>
+                    <article class="product-card">
+                        <img src="Images/WomanProduktbilde.jpg" alt="Produktbilde">
+                        <h3>Produktnavn</h3>
+                        <p>Pris: 999,-</p>
+                    </article>
+                    <article class="product-card">
+                        <img src="Images/WomanProduktbilde.jpg" alt="Produktbilde">
+                        <h3>Produktnavn</h3>
+                        <p>Pris: 999,-</p>
+                    </article>
+                    <article class="product-card">
+                        <img src="Images/WomanProduktbilde.jpg" alt="Produktbilde">
+                        <h3>Produktnavn</h3>
+                        <p>Pris: 999,-</p>
+                    </article>
+                    <article class="product-card">
+                        <img src="Images/WomanProduktbilde.jpg" alt="Produktbilde">
+                        <h3>Produktnavn</h3>
+                        <p>Pris: 999,-</p>
+                    </article>
+                    <article class="product-card">
+                        <img src="Images/WomanProduktbilde.jpg" alt="Produktbilde">
+                        <h3>Produktnavn</h3>
+                        <p>Pris: 999,-</p>
+                    </article>
+                </div>
+            </section>
+            <!-- Popular Categories Section -->
+            <section id="popular-categories" class="popular-categories">
+                <h2>Våre mest populære kategorier</h2>
                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit</p>
-            </article>
-            <!--Anmeldelse 2-->
-            <article class="review-card">
-                <img src="#" alt="Profilbilde">
-                <h3>Utrolig fornøyd!</h3>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit</p>
-            </article>
-            <!--Anmeldelse 3-->
-            <article class="review-card">
-                <img src="#" alt="Profilbilde">
-                <h3>Utrolig fornøyd!</h3>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit</p>
-            </article>
-            <!--Anmeldelse 4-->
-            <article class="review-card">
-                <img src="#" alt="Profilbilde">
-                <h3>Utrolig fornøyd!</h3>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit</p>
-            </article>
-        </section>
-    </main>
+                <div class="category-grid">
+                    <article class="category-card"><h3>Kategori 1</h3></article>
+                    <article class="category-card"><h3>Kategori 2</h3></article>
+                    <article class="category-card"><h3>Kategori 3</h3></article>
+                    <article class="category-card"><h3>Kategori 4</h3></article>
+                    <article class="category-card"><h3>Kategori 5</h3></article>
+                </div>
+            </section>
+
+            <!-- Reviews Section -->
+            <section id="reviews" class="reviews">
+                <h2>Anmeldelser</h2>
+                <div class="review-grid">
+                    <article class="review-card">
+                        <img src="Images/WomanProduktbilde.jpg" alt="Profilbilde">
+                        <h3>Utrolig fornøyd!</h3>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                    </article>
+                    <article class="review-card">
+                        <img src="Images/WomanProduktbilde.jpg" alt="Profilbilde">
+                        <h3>Utrolig fornøyd!</h3>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                    </article>
+                    <article class="review-card">
+                        <img src="Images/WomanProduktbilde.jpg" alt="Profilbilde">
+                        <h3>Utrolig fornøyd!</h3>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                    </article>
+                    <article class="review-card">
+                        <img src="Images/WomanProduktbilde.jpg" alt="Profilbilde">
+                        <h3>Utrolig fornøyd!</h3>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                    </article>
+                </div>
+            </section>
+        </main>
+    </div>
+
+    <!-- Footer -->
     <footer id="footer-contact" class="global-footer">
-        <!-- Seksjon 1 Logo/ingress-->
         <section class="footer-logo">
             <h3>Nettbutikk Logo</h3>
             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit</p>
-        </section >
-        <!-- Seksjon 2 Kontaktinfo-->
+        </section>
         <section class="footer-contact">
             <h3>Kontakt</h3>
             <p>Adresse: Gate 123 0977 Haugenstua</p>
             <p>Telefon: +47 90 20 30 13</p>
             <p>Email: Kontakt@Haugenstua.no</p>
         </section>
-        <!-- Seksjon 3 Snarveier -->
         <section class="footer-links">
             <h3>Snarveier</h3>
             <ul>
-                <li><a href="index.html">Hjem</a></li>
                 <li><a href="#popular-products">Produkter</a></li>
                 <li><a href="#popular-categories">Kategorier</a></li>
                 <li><a href="#footer-contact">Kontakt oss</a></li>
             </ul>
         </section>
-        <!-- Seksjon 4 Sosiale medier -->
         <section class="footer-social">
             <h3>Sosiale medier</h3>
             <ul>
                 <li><a href="https://instagram.com">Instagram</a></li>
                 <li><a href="https://facebook.com">Facebook</a></li>
-                <li><a href="https://linkedin.com">LinkedIn</a></li>
-                <li><a href="https://pinterest.com">Pinterest</a></li>
+                <li><a href="https://linkedin.com">Linkedin</a></li>
+                <li><a href="https://pinterest.com">Pintrest</a></li>
             </ul>
         </section>
     </footer>
-</div>
 </body>
 
 </html>

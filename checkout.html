@@ -3,155 +3,163 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>handlekurv side</title>
+    <title>Handlekurv side</title>
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="/fontawesome-free-6.7.0-web/css/all.css">
+    <link rel="stylesheet" href="/fontawesome-free-6.7.0-web/css/brands.css">
+    <link rel="stylesheet" href="/fontawesome-free-6.7.0-web/css/solid.css">
 </head>
 <body>
-    <header class="global-header">
-                <!--Søkefelt-->
-                <form class="search-form" action="#" method="get">
+    <div class="container">
+        <header class="global-header">
+            <!-- Søkefelt -->
+            <form class="search-form" action="#" method="get">
                 <label for="search">Søk</label>
                 <input type="text" id="search" name="search" placeholder="Søk her">
                 <button type="submit">Søk</button>
             </form>
-        <!--Global navigasjons meny til de forskjellige sidene, inkluderer checkout, produkt sider etc.-->
-        <nav class="nav">
-            <ul class="nav-list">
-                <li><a href="index.html">Hjem</a></li>
-                <li><a href="#popular-products">Produkter</a></li>
-                <!--Logo-->
-                <li><a href="index.html">Logo</a></li>
-                <li><a href="#popular-categories">Kategorier</a></li>
-                <li><a href="#footer-contact">Kontakt oss</a></li>
-                <li><a href="checkout.html">Handlekurv</a></li>
-            </ul>
-        </nav>
-    </header>
-    <main class="main-content-checkout">
-        <h1>Handlekurv</h1>
-        <!-- Shoppingbag -->
-        <section class="shopping-bag">
-            <h2>Shoppingbag</h2>
-            <!-- Produktkort -->
-            <article class="product-item">
-                <img src="#" alt="Bilde produkt 1">
-                <h3>Produktnavn</h3>
-                <p>Farge: svart</p>
-                <p>Pris: 1599,-</p>
-            </article>
-            <article class="product-item">
-                <img src="#" alt="Bilde produkt 2">
-                <h3>Produktnavn</h3>
-                <p>Farge: svart</p>
-                <p>Pris: 1599,-</p>
-            </article>
-        </section>
-     <!-- Seksjon 2: personopplysninger -->
-      <section class="personal-info">
-            <h2>Personopplysninger</h2>
-            <form class="personal-info-form" action="#" method="post">
-                <!--Fornavn-->
-                <label for="first-name">Fornavn</label>
-                <input type="text" id="first-name" name="first-name" required>
-                <!--Etternavn-->
-                <label for="last-name">Etternavn</label>
-                <input type="text" id="last-name" name="last-name" required>
-                <!--Adresse-->
-                <label for="adresse">Adresse</label>
-                <input type="text" id="adresse" name="adresse" required>
-                <!--Postnummer-->
-                <label for="postal-code">Postnummer</label>
-                <input type="text" id="postal-code" name="postal-code" required pattern="\d{4}" title="Postnummer må være 4 siffer">
-                <!--Poststed-->
-                <label for="city">Poststed</label>
-                <input type="text" id="city" name="city" required>
-                <!--Knapper-->
-                <button type="submit">Lagre</button>
-                <button type="reset">Avbryt</button>
-            </form>
-      </section>
-      <!--Seksjon Levering-->
-      <Section class="delivery-option">
-        <h2>Levering</h2>
-        <form action="#" method="post" class="delivery-form">
-            <!--Expresslevering hjem-->
-            <input type="radio" id="express-home" name="delivery" value="express-home" required>
-            <label for="express-home">Expresslevering hjem</label>
-            <p>Leveringstid : 1-2virkerdager. Pris: 99,-</p>
-            <!--Ekspress pakke til utleveringstid-->
-            <input type="radio" id="express-pickup" name="delivery" value="express-pickup">
-            <label for="express-pickup">Ekspress pakke til utleveringstid</label>
-            <p>Leveringstid: 1-2 virkedager til nærmeste utleveringstid. Pris: 79,-</p>
-            <!--Standard hjemlevering-->
-            <input type="radio" id="standard-home" name="delivery" value="standard-home">
-            <label for="standard-home">Standard hjemmelevering</label>
-            <p>Leveringstid: 3-5 virkedager. Gratis levering</p>
-        </form>
-    </Section>
-    <!--Betaling-->
-    <section class="payment-section">
-        <h2>Betaling</h2>
+            <!-- Global navigasjonsmeny til de forskjellige sidene, inkluderer checkout, produkt sider etc. -->
+            <nav class="nav">
+                <ul class="nav-list">
+                    <li><a href="index.html">Hjem</a></li>
+                    <li><a href="#popular-products">Produkter</a></li>
+                    <!-- Logo -->
+                    <li><a href="index.html">Logo</a></li>
+                    <li><a href="#popular-categories">Kategorier</a></li>
+                    <li><a href="#footer-contact">Kontakt oss</a></li>
+                    <li><a href="checkout.html">Handlekurv</a></li>
+                </ul>
+            </nav>
+        </header>
 
-        <form action="#" method="post" class="payment-form">
-            <!--Kortnummer-->
-            <label for="card-number">Kortnummer</label>
-            <input type="text" id="card-number" name="card-number" required pattern="\d{16}" title="kortnummer må være 16 siffer" placeholder="1234 5678 9012 3456">
-            <!--utløpsdata-->
-            <label for="expiry-date">Utløpsdato</label>
-            <input type="text" id="expiry-date" name="expiry-date" required placeholder="MM/ÅÅ" pattern="(0[1-9]|1[0-2])\/?([0-9]{2})" title="Utløpsdato må være i format">
-            <!--CVC-->
-            <label for="cvc">CVC/CVV</label>
-            <input type="text" id="cvc" name="cvc" required pattern="\d{3}" title="CVC må være 3 siffer" placeholder="123"> 
-            <!--Total pris-->
-            <p>Totalbeløp: 3198,-</p>
-            <!--Fullfør knapp-->
-            <button type="submit">Fullfør kjøp</button>
-
-            <!-- Samtykke -->
-        <div class="consent">
-            <input type="checkbox" id="terms" name="terms" required>
-            <label for="terms">Ja, jeg godtar vilkårene</label>
-
-            <input type="checkbox" id="newsletter" name="newsletter">
-            <label for="newsletter">Ja takk! Send nyhetsbrev til meg</label>
-        </div>
-            <p> Du bekrefter herved at opplysningene og dokumentene du har oppgitt er korrekte og fullstendige. Leverandøren forbeholder seg retten til å heve eller avslutte avtaleforholdet dersom det foreligger uriktige eller ufullstendige opplysninger.</p>
-        </form>
-    </section>
-    </main> 
-    <footer id="footer-contact" class="global-footer">
-        <!-- Seksjon 1 Logo/ingress-->
-        <section class="footer-logo">
-            <h3>Nettbutikk Logo</h3>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit</p>
-        </section >
-        <!-- Seksjon 2 Kontaktinfo-->
-        <section class="footer-contact">
-            <h3>Kontakt</h3>
-            <p>Adresse: Gate 123 0977 Haugenstua</p>
-            <p>Telefon: +47 90 20 30 13</p>
-            <p>Email: Kontakt@Haugenstua.no</p>
-        </section>
-        <!-- Seksjon 3 Snarveier -->
-        <section class="footer-links">
-            <h3>Snarveier</h3>
-            <ul>
-                <li><a href="index.html">Hjem</a></li>
-                <li><a href="#popular-products">Produkter</a></li>
-                <li><a href="#popular-categories">Kategorier</a></li>
-                <li><a href="#footer-contact">Kontakt oss</a></li>
-            </ul>
-        </section>
-        <!-- Seksjon 4 Sosiale medier -->
-        <section class="footer-social">
-            <h3>Sosiale medier</h3>
-            <ul>
-                <li><a href="https://instagram.com">Instagram</a></li>
-                <li><a href="https://facebook.com">Facebook</a></li>
-                <li><a href="https://linkedin.com">LinkedIn</a></li>
-                <li><a href="https://pinterest.com">Pinterest</a></li>
-            </ul>
-        </section>
-    </footer>
+        <main class="main-content-checkout">
+            <!-- Tittel for handlekurv -->
+            <h1>Handlekurv</h1>
+            
+            <!-- Shoppingbag seksjon -->
+            <section class="shopping-bag">
+                <h2>Shoppingbag</h2>
+                <!-- Produktkort -->
+                <article class="product-item">
+                    <img src="Images/WomanProduktbilde.jpg" alt="Bilde produkt 1">
+                    <h3>Produktnavn</h3>
+                    <p>Farge: svart</p>
+                    <p>Pris: 1599,-</p>
+                </article>
+                <article class="product-item">
+                    <img src="Images/WomanProduktbilde.jpg" alt="Bilde produkt 2">
+                    <h3>Produktnavn</h3>
+                    <p>Farge: svart</p>
+                    <p>Pris: 1599,-</p>
+                </article>
+            </section>
+            
+            <!-- Seksjon for personopplysninger -->
+            <section class="personal-info">
+                <h2>Personopplysninger</h2>
+                <form class="personal-info-form" action="#" method="post">
+                    <!-- Fornavn -->
+                    <label for="first-name">Fornavn</label>
+                    <input type="text" id="first-name" name="first-name" required>
+                    <!-- Etternavn -->
+                    <label for="last-name">Etternavn</label>
+                    <input type="text" id="last-name" name="last-name" required>
+                    <!-- Adresse -->
+                    <label for="adresse">Adresse</label>
+                    <input type="text" id="adresse" name="adresse" required>
+                    <!-- Postnummer -->
+                    <label for="postal-code">Postnummer</label>
+                    <input type="text" id="postal-code" name="postal-code" required pattern="\d{4}" title="Postnummer må være 4 siffer">
+                    <!-- Poststed -->
+                    <label for="city">Poststed</label>
+                    <input type="text" id="city" name="city" required>
+                    <!-- Knapper -->
+                    <button type="submit">Lagre</button>
+                    <button type="reset">Avbryt</button>
+                </form>
+            </section>
+            
+            <!-- Seksjon for levering -->
+            <section class="delivery-option">
+                <h2>Levering</h2>
+                <form action="#" method="post" class="delivery-form">
+                    <!-- Expresslevering hjem -->
+                    <input type="radio" id="express-home" name="delivery" value="express-home" required>
+                    <label for="express-home">Expresslevering hjem</label>
+                    <p>Leveringstid : 1-2 virkedager. Pris: 99,-</p>
+                    <!-- Ekspress pakke til utleveringstid -->
+                    <input type="radio" id="express-pickup" name="delivery" value="express-pickup">
+                    <label for="express-pickup">Ekspress pakke til utleveringstid</label>
+                    <p>Leveringstid: 1-2 virkedager til nærmeste utleveringstid. Pris: 79,-</p>
+                    <!-- Standard hjemlevering -->
+                    <input type="radio" id="standard-home" name="delivery" value="standard-home">
+                    <label for="standard-home">Standard hjemmelevering</label>
+                    <p>Leveringstid: 3-5 virkedager. Gratis levering</p>
+                </form>
+            </section>
+            
+            <!-- Seksjon for betaling -->
+            <section class="payment-section">
+                <h2>Betaling</h2>
+                <form action="#" method="post" class="payment-form">
+                    <!-- Kortnummer -->
+                    <label for="card-number">Kortnummer</label>
+                    <input type="text" id="card-number" name="card-number" required pattern="\d{16}" title="kortnummer må være 16 siffer" placeholder="1234 5678 9012 3456">
+                    <!-- Utløpsdato -->
+                    <label for="expiry-date">Utløpsdato</label>
+                    <input type="text" id="expiry-date" name="expiry-date" required placeholder="MM/ÅÅ" pattern="(0[1-9]|1[0-2])\/?([0-9]{2})" title="Utløpsdato må være i format">
+                    <!-- CVC -->
+                    <label for="cvc">CVC/CVV</label>
+                    <input type="text" id="cvc" name="cvc" required pattern="\d{3}" title="CVC må være 3 siffer" placeholder="123">
+                    <!-- Totalbeløp -->
+                    <p>Totalbeløp: 3198,-</p>
+                    <!-- Fullfør knapp -->
+                    <button type="submit">Fullfør kjøp</button>
+                    <!-- Samtykke -->
+            
+                        <input type="checkbox" id="terms" name="terms" required>
+                        <label for="terms">Ja, jeg godtar vilkårene</label>
+                        <input type="checkbox" id="newsletter" name="newsletter">
+                        <label for="newsletter">Ja takk! Send nyhetsbrev til meg</label>
+                    <p>Du bekrefter herved at opplysningene og dokumentene du har oppgitt er korrekte og fullstendige...</p>
+                </form>
+            </section>
+        </main>
+    
+        <footer id="footer-contact" class="global-footer">
+            <!-- Seksjon 1: Logo/Ingress -->
+            <section class="footer-logo">
+                <h3>Nettbutikk Logo</h3>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit</p>
+            </section>
+            <!-- Seksjon 2: Kontaktinfo -->
+            <section class="footer-contact">
+                <h3>Kontakt</h3>
+                <p>Adresse: Gate 123 0977 Haugenstua</p>
+                <p>Telefon: +47 90 20 30 13</p>
+                <p>Email: Kontakt@Haugenstua.no</p>
+            </section>
+            <!-- Seksjon 3: Snarveier -->
+            <section class="footer-links">
+                <h3>Snarveier</h3>
+                <ul>
+                    <li><a href="index.html">Hjem</a></li>
+                    <li><a href="#popular-products">Produkter</a></li>
+                    <li><a href="#popular-categories">Kategorier</a></li>
+                    <li><a href="#footer-contact">Kontakt oss</a></li>
+                </ul>
+            </section>
+            <!-- Seksjon 4: Sosiale medier -->
+            <section class="footer-social">
+                <h3>Sosiale medier</h3>
+                <ul>
+                    <li><a href="https://instagram.com">Instagram</a></li>
+                    <li><a href="https://facebook.com">Facebook</a></li>
+                    <li><a href="https://linkedin.com">LinkedIn</a></li>
+                    <li><a href="https://pinterest.com">Pinterest</a></li>
+                </ul>
+            </section>
+        </footer>
+    </div>
 </body>
 </html>
