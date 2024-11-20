@@ -14,7 +14,7 @@ body {
 /* Container */
 .container {
     width: 100%;
-    padding: 15px;
+    padding: 5px;;
 }
 
 /* Gloabale headeren */
@@ -27,16 +27,24 @@ body {
 /* Søkebaren */
 .search-form {
     display: flex;
-    gap: 5px;
+    align-items: center;
+    gap: 10px;
     flex-wrap: wrap;
+    width: 100%;
+    max-width: 300px;
+    margin: 10px auto;
 }
 
-.search-form input,
-.search-form button {
-    padding: 10px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
+.search-form input[type="text"] {
+    flex: 0.8; 
+    padding: 8px;
+    border: 1.25px solid #000;
+    border-radius: 4px 0 2 4px;
+    font-size: 0.8rem;
+    outline: none;
 }
+
+
 
 .nav-list {
     list-style: none;
@@ -69,15 +77,15 @@ body {
 
 /* Popular Products */
 .popular-products {
-    margin: 20px;
-    padding: 5px;
-    text-align: center;
+    margin: 20px 0;
+    padding: 2px;
+    text-align: left;
 }
 
 .popular-products h2 {
-    font-size: 1rem;
+    font-size: 1.4rem;
     font-weight: bold;
-    margin-bottom: 5px;
+    margin-bottom: 10px;
 }
 .popular-products p{
     margin-bottom: 20px ;
@@ -85,22 +93,26 @@ body {
     color: #333;
 }
 
-/* Filter knappene */
+/* Filter knappene */ 
 .filter-list {
     display: flex;
-    gap: 25px;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 15px;
     list-style: none;
     padding: 0;
-    flex-wrap: wrap;
-    margin: 0 0 20px 0;
+    margin: 0 0 25px;
 }
 
-.filter-button {
+ .filter-list .filter-button {
+    flex: 1;
+    max-width: 100px;
     display: inline-block;
-    padding: 15px 25px;
+    padding: 15px 30px;
     border: 1px solid black;
     background: none;
     text-decoration: none;
+    text-align: center;
     color: black;
     border-radius: 5px;
     font-size: 1rem;
@@ -131,7 +143,7 @@ body {
 /* Popular Categories */
 .popular-categories {
     margin: 20px 0;
-    padding: 20px;
+    padding: 0px;
     text-align: left;
 }
 .popular-categories h2 {
@@ -160,28 +172,87 @@ body {
 
 
 /* Anmeldeser */
-.review-list {
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
+.reviews {
+    margin: 20px 0;
+    padding: 0px;
+    
 }
 
+.reviews h2 {
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-bottom: 20px;
+    text-align: left;
+}
+
+/* Review Grid */
+.review-grid {
+    display: flex;
+    flex-direction: column; 
+    gap: 8px; 
+}
+
+/* Review Card */
 .review-card {
     display: flex;
-    align-items: flex-start;
-    gap: 15px;
-    border: 1px solid #ddd;
-    padding: 10px;
+    flex-direction: column; 
+    align-items: flex-start; 
+    gap: 10px; 
+    /* mulig fjern */
+    border: 1px solid #ddd;    
+    padding: 20px; 
+    border-radius: 5px; 
+    background-color: #fff; 
+    text-align: left; 
+    max-width: 800px; 
+    margin: 0 auto; 
 }
 
+/* Review Card Image */
 .review-card img {
-    width: 150px;
-    height: auto;
+    width: 100%; 
+    max-width: 100px; 
+    height: auto; 
+    border-radius: 5px; 
+}
+
+.review-card h3 {
+    margin: 0 0 10px 0; 
+    font-size: 1.2rem; 
+    font-weight: bold; 
+    color: #333;
+}
+
+.review-card p {
+    margin: 0; 
+    font-size: 1rem; 
+    line-height: 1.5; 
+    color: #555;
 }
 
 
 
-/* Footer */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*globale Footer */
 .global-footer {
     margin-top: 20px;
     padding: 20px;
