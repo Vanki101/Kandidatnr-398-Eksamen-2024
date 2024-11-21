@@ -193,7 +193,7 @@ body {
     gap: 8px; 
 }
 
-/* Review Card */
+/* ANMELDELSES KORT */
 .review-card {
     display: flex;
     flex-direction: column; 
@@ -209,7 +209,7 @@ body {
     margin: 0 auto; 
 }
 
-/* Review Card Image */
+/* ANMELDESES BILDE*/
 .review-card img {
     width: 100%; 
     max-width: 150px; 
@@ -231,6 +231,131 @@ body {
     color: #555;
 }
 
+/* Produkt siden */
+/* Brødsmulesti */
+.breadcrumb {
+    margin: 10px 0;
+}
+
+.breadcrumb ol {
+    display: flex;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+.breadcrumb li {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+.breadcrumb li + li {
+    margin-left: 10px;
+}
+.breadcrumb a {
+    text-decoration: none;
+    color: black;
+}
+.breadcrumb a:hover {
+    text-decoration: underline;
+}
+.breadcrumb span {
+    color: rgb(0, 0, 0);
+    font-weight: bold;
+}
+
+
+/* Produktbilder */
+.product-images {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+.product-images img {
+    width: 100%;
+    height: auto;
+    border: 1px solid #ddd;
+}
+/* P-informasjon */
+.product-info {
+    margin-bottom: 25px;
+}
+
+.product-info h1 {
+    font-size: 1.rem;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+.product-info a {
+    text-decoration: none;
+    color: gray;
+    font-size: 1rem;
+    margin-bottom: 10px;
+    display: inline-block;
+}
+.product-info p {
+    margin: 5px 0;
+    font-size: 1rem;
+}
+
+/* Lignende produkter */
+
+.related-products {
+    margin-top: 30px;
+}
+
+.related-products h2 {
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+.related-products article {
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    margin-bottom: 10px;
+}
+
+
+.related-products .product-card {
+    border: 1px solid #ddd;
+    padding: 15px;
+    text-align: left;
+    margin-bottom: 15px;
+}
+
+.related-products .product-card img {
+    width: 100%;
+    height: auto;
+    margin-bottom: 10px;
+    max-width: 10px;
+}
+
+.related-products .product-card h3 {
+    font-size: 1rem;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.related-products .product-card p {
+    font-size: 0.9rem;
+    color: gray;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 /* Checkout siden */
 /* Shopping baggen */
@@ -249,7 +374,7 @@ body {
     margin-bottom: 10px;
 }
 
-/* Informasjon seksjon */
+/* INFO seksjon */
 .personal-info form {
     display: flex;
     flex-direction: column;
@@ -271,7 +396,7 @@ font-size: 0.8rem;
 text-align: center;
 width: 60px
 }
-/* Leveranse  */
+/* LEVERANSE seksjon   */
 
 .delivery-options h2 {
     margin-top: 25px;
@@ -286,7 +411,7 @@ width: 60px
     margin-right: 10px;
 }
 
-/* Payment Section */
+/* BETALING Seksjon */
 
 .payment form {
     display: flex;

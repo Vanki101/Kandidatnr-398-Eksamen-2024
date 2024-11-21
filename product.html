@@ -11,122 +11,122 @@
 </head>
 <body>  
     <div class=container>
-    <header class="global-header">
-        <!--Søkefelt-->
-        <form class="search-form" action="#" method="get">
-        <label for="search">Søk</label>
-        <input type="text" id="search" name="search" placeholder="Søk her">
-        <button type="submit">Søk</button>
-    </form>
-<!--Global navigasjons meny til de forskjellige sidene, inkluderer checkout, produkt sider etc.-->
-<nav class="nav">
-    <ul class="nav-list">
-        <li><a href="index.html">Hjem</a></li>
-        <li><a href="#popular-products">Produkter</a></li>
-        <!--Logo-->
-        <li><a href="index.html">Logo</a></li>
-        <li><a href="#popular-categories">Kategorier</a></li>
-        <li><a href="#footer-contact">Kontakt oss</a></li>
-        <li><a href="checkout.html">Handlekurv</a></li>
-    </ul>
-</nav>
-</header>
-    <!--Brødsmulesti--> 
-    <nav class="breadcrumb">
-        <ol>
-            <li><a href="index.html">Hjem</a></li>
-            <li><a href="categories.html">Kategorier</a></li>
-            <li><span>Produktnavn</span></li>
-        </ol>
-    </nav>
-    <!--Hovedinnhold-->
-    <main class="main-content-product">
-        <section class="product-image">
-                <figure class="main-image">
-                    <img src="Images/WomanProduktbilde.jpg" alt="Stort bilde">
+        <header class="global-header">
+            <!-- Search Form -->
+            <form class="search-form" action="#" method="get">
+                <input type="text" id="search" name="search" placeholder="Søk her">
+                <label for="search">
+                    <i class="x">x</i>
+                </label>
+            </form>
+            <!-- Navigation Menu -->
+            <nav class="nav">
+                <ul class="nav-list">
+                    <li><a href="index.html">Hjem</a></li>
+                    <li><a href="#popular-products">Produkter</a></li>
+                    <li><a href="index.html">Logo</a></li>
+                    <li><a href="#popular-categories">Kategorier</a></li>
+                    <li><a href="#footer-contact">Kontakt oss</a></li>
+                    <li><a href="checkout.html">handklekurv</i></a></li>
+                </ul>   
+                <ul class="icon-list">
+                    <li><a href="#"><img src="https://via.placeholder.com/24" alt="User Icon"></a></li>
+                    <li><a href="#"><img src="https://via.placeholder.com/24" alt="Heart Icon"></a></li>
+                    <li><a href="#"><img src="https://via.placeholder.com/24" alt="Cart Icon"></a></li>
+                </ul>
+            </nav>
+        </header>
+        <main>
+            <!-- Brødsmulesti -->
+            <nav class="breadcrumb">
+                <ol>
+                    <li><a href="index.html">Hjem</a></li>
+                    <li>
+                        <i class="fas fa-chevron-right"></i>
+                        <a href="#">Kategori</a>
+                    </li>
+                    <li>
+                        <i class="fas fa-chevron-right"></i>
+                        <span>Produktnavn</span>
+                    </li>
+                </ol>
+            </nav>
+            <!-- Produkt bilder -->
+            <section class="product-images">
+                <figure>
+                    <img src="Images/WomanProduktbilde.jpg" alt="Produktbilde 1">
                 </figure>
-                <figure class="thumbnail-image">
-                    <img src="Images/WomanProduktbilde.jpg" alt="Lite bilde">
+                <figure>
+                    <img src="Images/WomanProduktbilde.jpg" alt="Produktbilde 2">
                 </figure>
-                <figure class="thumbnail-image">
-                    <img src="Images/WomanProduktbilde.jpg" alt="Lite bilde">
+                <figure>
+                    <img src="Images/WomanProduktbilde.jpg" alt="Produktbilde 3">
                 </figure>
-                <figure class="thumbnail-image">
-                    <img src="Images/WomanProduktbilde.jpg" alt="lite bilde">
-                </figure>
-        </section>
+            </section>
+
             <!--Produktinfo-->
-        <section class="product-info">
-            <article class="product-details">
+            <section class="product-details">
                 <h1>Produktnavn</h1>
-                <p class="brand"><a href="#">Merkenavn</a></p>
-                <p class="price"> 999 kr</p>
-                <p class="color">Farge: svart</p>
-            </article>
+                <p>Merke: <a href="#">Merkenavn</a></p>
+                <p>Kr 1 999,- inkl. mva.</p>
+                <p>Farge: beige</p>
+            </section>
+
         </section>
         <!-- Relaterte produkter seksjon -->   
-        <section class="related-product-card">
-            <h2>De mest populære</h2>
-            <article>
-                <img src="Images/WomanProduktbilde.jpg" alt="#">
-                <h3>Produktnavn 1</h3>
-                <p class="price">Pris: 199 kr</p>
-                <a href="Images/WomanProduktbilde.jpg" class="product-link">Se detaljer</a>
-            </article>
-            <article>
-                <img src="Images/WomanProduktbilde.jpg" alt="#">
-                <h3>Produktnavn 2</h3>
-                <p class="price">Pris: 199 kr</p>
-                <a href="Images/WomanProduktbilde.jpg" class="product-link">Se detaljer</a>
-            </article>
-            <article>
-                <img src="Images/WomanProduktbilde.jpg" alt="#">
-                <h3>Produktnavn 3</h3>
-                <p class="price">Pris: 199 kr</p>
-                <a href="Images/WomanProduktbilde.jpg" class="product-link">Se detaljer</a>
-            </article>
-            <article>
-                <img src="Images/WomanProduktbilde.jpg" alt="#">
-                <h3>Produktnavn 4</h3>
-                <p class="price">Pris: 199 kr</p>
-                <a href="Images/WomanProduktbilde.jpg" class="product-link">Se detaljer</a>
-            </article>      
-        </section>      
-    </main>     
-    <footer id="footer-contact" class="global-footer">
-        <!-- Seksjon 1 Logo/ingress-->
-        <section class="footer-logo">
-            <h3>Nettbutikk Logo</h3>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit</p>
-        </section >
-        <!-- Seksjon 2 Kontaktinfo-->
-        <section class="footer-contact">
-            <h3>Kontakt</h3>
-            <p>Adresse: Gate 123 0977 Haugenstua</p>
-            <p>Telefon: +47 90 20 30 13</p>
-            <p>Email: Kontakt@Haugenstua.no</p>
-        </section>
-        <!-- Seksjon 3 Snarveier -->
-        <section class="footer-links">
-            <h3>Snarveier</h3>
-            <ul>
-                <li><a href="index.html">Hjem</a></li>
-                <li><a href="#popular-products">Produkter</a></li>
-                <li><a href="#popular-categories">Kategorier</a></li>
-                <li><a href="#footer-contact">Kontakt oss</a></li>
-            </ul>
-        </section>
-        <!-- Seksjon 4 Sosiale medier -->
-        <section class="footer-social">
-            <h3>Sosiale medier</h3>
-            <ul>
-                <li><a href="https://instagram.com">Instagram</a></li>
-                <li><a href="https://facebook.com">Facebook</a></li>
-                <li><a href="https://linkedin.com">LinkedIn</a></li>
-                <li><a href="https://pinterest.com">Pinterest</a></li>
-            </ul>
-        </section>
-    </footer>
+        <section class="related-products">
+                <h2>Lignende produkter</h2>
+                <article>
+                    <img src="Images/WomanProduktbilde.jpg" alt="Lignende produkt 1">
+                    <h3>Product name</h3>
+                    <p>Kr 1999</p>
+                </article>
+                <article>
+                    <img src="Images/WomanProduktbilde.jpg" alt="Lignende produkt 2">
+                    <h3>Product name</h3>
+                    <p>Kr 1999</p>
+                </article>
+                <article>
+                    <img src="Images/WomanProduktbilde.jpg" alt="Lignende produkt 3">
+                    <h3>Product name</h3>
+                    <p>Kr 1999</p>
+                </article>
+                <article>
+                    <img src="Images/WomanProduktbilde.jpg" alt="Lignende produkt 4">
+                    <h3>Product name</h3>
+                    <p>Kr 1999</p>
+                </article>
+            </section>
+        </main>
+   <footer id="footer-contact" class="global-footer">
+            <section class="footer-logo">
+                <h3>Nettbutikk Logo</h3>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit</p>
+            </section>
+            <section class="footer-contact">
+                <h3>Kontakt</h3>
+                <p>Adresse: Gate 123 0977 Haugenstua</p>
+                <p>Telefon: +47 90 20 30 13</p>
+                <p>Email: Kontakt@Haugenstua.no</p>
+            </section>
+            <section class="footer-links">
+                <h3>Snarveier</h3>
+                <ul>
+                    <li><a href="#popular-products">Produkter</a></li>
+                    <li><a href="#popular-categories">Kategorier</a></li>
+                    <li><a href="#footer-contact">Kontakt oss</a></li>
+                </ul>
+            </section>
+            <section class="footer-social">
+                <h3>Sosiale medier</h3>
+                <ul>
+                    <li><a href="https://instagram.com">Instagram</a></li>
+                    <li><a href="https://facebook.com">Facebook</a></li>
+                    <li><a href="https://linkedin.com">Linkedin</a></li>
+                    <li><a href="https://pinterest.com">Pintrest</a></li>
+                </ul>
+            </section>
+        </footer>
     </div>
 </body>
 </html>
