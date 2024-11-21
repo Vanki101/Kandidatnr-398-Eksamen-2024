@@ -14,7 +14,7 @@ body {
 /* Container */
 .container {
     width: 100%;
-    padding: 5px;;
+    padding: 5px;
 }
 
 /* Gloabale headeren */
@@ -53,6 +53,7 @@ body {
     gap: 10px;
 }
 
+/* Forside skesjonen */
 /* Banner */
 .banner {
     background-color: #e0e0e0;
@@ -211,7 +212,7 @@ body {
 /* Review Card Image */
 .review-card img {
     width: 100%; 
-    max-width: 100px; 
+    max-width: 150px; 
     height: auto; 
     border-radius: 5px; 
 }
@@ -231,10 +232,115 @@ body {
 }
 
 
+/* Checkout siden */
+/* Shopping baggen */
+.shopping-bag {
+    margin-bottom: 20px;
+}
+.shopping-bag .product-card {
+    width: 100%;
+    border-radius: 5px;
+    padding: 1px;
+    margin-bottom: 20px;
+}
+.shopping-bag .product-card img {
+    width: 100%;
+    height: auto;
+    margin-bottom: 10px;
+}
 
+/* Informasjon seksjon */
+.personal-info form {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    padding: 15px;
+}
+.personal-info input {
+    width: 100%;
+    padding: 16px;
+    border: 1px solid #000000;
+   
+}   
+.personal-info button {
+background-color: #333;
+color: white;
+padding: 10px;
+cursor: pointer;
+font-size: 0.8rem;
+text-align: center;
+width: 60px
+}
+/* Leveranse  */
 
+.delivery-options h2 {
+    margin-top: 25px;
+}
+.delivery-options form label {
+    margin-top: 5px;
+    display: flex;
+    margin-bottom: 25px;
+    font-weight: bold;
+}
+.delivery-options input[type="radio"] {
+    margin-right: 10px;
+}
 
+/* Payment Section */
 
+.payment form {
+    display: flex;
+    flex-direction: column;
+    gap: 0px;
+}
+.payment h2 {
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-bottom: 10px
+    }
+
+.payment form label {
+    font-weight: bold;
+    margin-bottom: 5px;
+    display: block;
+}
+.payment form input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 1rem;
+    margin-bottom: 15px;
+}
+
+.payment p {
+    font-size: 1rem;
+    margin: 10px 0;
+}
+
+.payment form button {
+    padding: 12px 20px; 
+    margin: 10 px auto 0;
+    background-color: #333; 
+    color: white;  
+    border: none; 
+    border-radius: 5px;
+    font-size: 0.8rem;
+    cursor: pointer;
+    text-align: center;
+    width: 30%;
+}
+.payment button:hover {
+    background-color: #0056b3;
+}
+.payment .consent label {
+    display: block;
+    margin-bottom: 10px;
+}
+
+.payment .consent input[type="checkbox"]{
+    margin-right: 5px;
+}
 
 
 

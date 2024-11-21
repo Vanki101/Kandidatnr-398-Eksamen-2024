@@ -46,13 +46,13 @@
             <section class="shopping-bag">
                 <h2>1. SHOPPINGBAGEN DIN</h2>
                 <article class="product-card">
-                    <img src="https://via.placeholder.com/800x600" alt="Produktbilde">
+                    <img src="Images/WomanProduktbilde.jpg" alt="Produktbilde">
                     <h3>Produktnavn</h3>
                     <p>Kr 1999</p>
                     <p>Farge: beige</p>
                 </article>
                 <article class="product-card">
-                    <img src="https://via.placeholder.com/800x600" alt="Produktbilde">
+                    <img src="Images/WomanProduktbilde.jpg" alt="Produktbilde">
                     <h3>Produktnavn</h3>
                     <p>Kr 1999</p>
                     <p>Farge: beige</p>
@@ -62,21 +62,22 @@
             <!-- Section 2: Personopplysninger -->
             <section class="personal-info">
                 <h2>2. DINE OPPLYSNINGER</h2>
+                <p>Leveringsadresse</p>
                 <form>
-                    <label for="firstname">Fornavn*</label>
-                    <input type="text" id="firstname" name="firstname" required>
+                    <label for="firstname"></label>
+                    <input type="text" id="firstname" name="firstname" required placeholder="Fornavn*">
 
-                    <label for="lastname">Etternavn*</label>
-                    <input type="text" id="lastname" name="lastname" required>
+                    <label for="lastname"></label>
+                    <input type="text" id="lastname" name="lastname" required placeholder="Etternavn*">
 
-                    <label for="address">Gateadresse*</label>
-                    <input type="text" id="address" name="address" required>
+                    <label for="address"></label>
+                    <input type="text" id="address" name="address" required placeholder="Gateadresse*">
 
-                    <label for="postcode">Postnummer*</label>
-                    <input type="text" id="postcode" name="postcode" required pattern="\d{4}" title="Postnummer må være 4 siffer">>
+                    <label for="postcode"></label>
+                    <input type="text" id="postcode" name="postcode" required pattern="\d{4}" title="Postnummer må være 4 siffer" placeholder="Postnummer*">
 
-                    <label for="city">Poststed*</label>
-                    <input type="text" id="city" name="city" required>
+                    <label for="city"></label>
+                    <input type="text" id="city" name="city" required placeholder="Postnummer*">
 
                     <button type="submit">Lagre</button>
                     <a href="#" class="cancel">Avbryt</a>
@@ -102,26 +103,25 @@
             <!-- Section 4: Betaling -->
             <section class="payment">
                 <h2>4. BETALING</h2>
+                <h3>BETAL MED KORT</h3>
                 <form>
                     <label for="card-number">Kortnummer</label>
                     <input type="text" id="card-number" name="card-number" required pattern="\d{16}" title="kortnummer må være 16 siffer" placeholder="1234 5678 9012 3456">
 
                     <label for="expiry-date">Utløpsdato</label>
-                    <input type="text" id="expiry-date" name="expiry-date" placeholder="MM / YY" required>
+                    <input type="text" id="expiry-date" name="expiry-date" required placeholder="MM/ÅÅ" pattern="(0[1-9]|1[0-2])\/?([0-9]{2})" title="Utløpsdato må være i format">
 
                     <label for="cvc">CVC/CVV</label>
-                    <input type="text" id="cvc" name="cvc" placeholder="•••" required>
-
+                    <input type="text" id="cvc" name="cvc" required pattern="\d{3}" title="CVC må være 3 siffer" placeholder="123">
+                    <p>Å betale inkl. mva: 1 199 kr</p>
                     <button type="submit">Fullfør Kjøp</button>
                 </form>
-                <p>Å betale inkl. mva: 1 199 kr</p>
+               
 
                 <div class="consent">
-                    <p>
-                        Du bekrefter herved at opplysningene og dokumentene du har oppgitt er korrekte og fullstendige.
+                    <p>Du bekrefter herved at opplysningene og dokumentene du har oppgitt er korrekte og fullstendige.
                         Leverandøren forbeholder seg retten til å heve eller avslutte avtaleforholdet dersom det foreligger
-                        uriktige eller ufullstendige opplysninger.
-                    </p>
+                        uriktige eller ufullstendige opplysninger.</p>
                     <label>
                         <input type="checkbox" name="terms"> Ja, jeg godtar vilkårene
                     </label>
@@ -130,8 +130,9 @@
                     </label>
                 </div>
             </section>
-        </div>
+            
         </main>
+    </div>
         <!-- Footer -->
         <footer id="footer-contact" class="global-footer">
             <section class="footer-logo">
