@@ -18,13 +18,16 @@ body {
 }
 
 /* Gloabale headeren */
+/* Mobil-stil */
 .global-header {
     display: flex;
-    flex-direction: column;
-    gap: 20px;
+    flex-direction: column; /* For mobil: Elementer ligger under hverandre */
+    align-items: center;
+    gap: 100px;
     padding: 10px;
     margin-bottom: 15px;
 }
+
 /* Søkebaren */
 .search-form {
     display: flex;
@@ -70,19 +73,22 @@ body {
     list-style: none;
     display: flex;
     flex-direction: column;
-    gap: 10px;
+    align-items: center;
+    gap: 20px;
     padding: 0;
     margin: 0;
 }
 .nav-list a {
     text-decoration: none;
-    font-size: 1.2rem;
+    font-size: 1rem;
     color: #000
 }
 /* Logo */
 .nav-list li:nth-child(3) a {
-    font-size: 2rem;
+    font-size: 1.5rem;
     font-weight: bold;
+    line-height: 1;
+  
 }
 .icon-list {
     list-style: none;
@@ -499,32 +505,29 @@ width: 60px
     margin-right: 5px;
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 /*globale Footer */
 .global-footer {
-    margin-top: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 auto;
+    gap: 20px;
     padding: 20px;
     color: black;
-    text-align: left;
+    justify-content: space-between;
 }
 
-.global-footer section {
+.global-footer section:first-of-type {
+    width: 100%;
+    text-align: left;
     margin-bottom: 20px;
+}
+.global-footer section:not(:first-of-type) {
+    flex: 1; 
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    gap: 10px; 
+    min-width: 200px; 
 }
 .global-footer h3 {
     font-size: 1.2rem;
@@ -578,3 +581,107 @@ width: 60px
     flex-direction: column;
     gap: 5px;
 }
+
+
+
+/* Media query for større skjermer */
+@media (min-width: 1200px) {
+    body {
+        max-width: 1200px; /* Setter maks bredde */
+        margin: 0 auto; /* Sentrerer siden */
+    }
+
+        /* Header Desktop */
+    .global-header {
+        display: flex; 
+        flex-direction: row; 
+        justify-content: space-between; 
+        align-items: center; 
+        margin: 0 auto; 
+        padding: 0 20px; 
+    }
+
+    .search-form {
+        flex: 1; 
+        display: flex;
+        justify-content: flex-start; 
+        align-items: center; 
+        gap: 10px; 
+        max-width: 300px; 
+    }
+
+    .nav {
+        flex: 3; 
+        display: flex; 
+        justify-content: center; 
+        align-items: center; 
+        gap: 15px; 
+    }
+
+    .nav-list {
+        display: flex; 
+        flex-direction: row;
+        list-style: none; 
+        gap: 20px; 
+        padding: 0;
+        margin: 0; 
+    }
+
+    .nav-list a {
+        font-size: 1rem; 
+        color: black; 
+        text-decoration: none; 
+        line-height: 1.6; 
+    }
+
+    .icon-list {
+        flex: 1; 
+        display: flex; 
+        justify-content: flex-end; 
+        align-items: center; 
+        gap: 15px; 
+    }
+
+    .icon-list a {
+        display: flex; 
+        justify-content: center;
+        align-items: center; 
+        font-size: 1.2rem; 
+        text-decoration: none; 
+    }
+
+    /* Footer desktop */
+   .global-footer {
+    display: flex;
+    max-width: 1200px;
+    margin: 0 auto;
+    gap: 20px;
+   }
+
+   /* Logo  */
+   .global-footer section:first-of-type {
+    width: 100%;
+    text-align: left;
+   }
+   .global-footer section:not(:first-of-type) {
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    text-align: left;
+    gap: 10px;
+    
+   }
+
+    }
+
+
+    
+
+
+
+
+
+
+
+
+
