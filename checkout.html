@@ -5,21 +5,21 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="/css/style.css">
-    <link rel="stylesheet" href="/fontawesome-free-6.7.0-web/css/all.css">
-    <link rel="stylesheet" href="/fontawesome-free-6.7.0-web/css/brands.css">
-    <link rel="stylesheet" href="/fontawesome-free-6.7.0-web/css/solid.css">
+    <link rel="stylesheet" href="Ikoner/css/all.css">
+    <link rel="stylesheet" href="/Ikoner/css/solid.css">
+    <link rel="stylesheet" href="/Ikoner/css/brands.css">
     <title>Checkout</title>
 </head>
 
 <body>
     <div class="container">
-        <!-- Global Header -->
-        <header class="global-header">
+        <!-- Header -->
+         <header class="global-header">
             <!-- Search Form -->
             <form class="search-form" action="#" method="get">
                 <input type="text" id="search" name="search" placeholder="Søk her">
                 <label for="search">
-                    <i class="x">x</i>
+                    <i class="fas fa-search"></i>
                 </label>
             </form>
             <!-- Navigation Menu -->
@@ -30,12 +30,17 @@
                     <li><a href="index.html">Logo</a></li>
                     <li><a href="#popular-categories">Kategorier</a></li>
                     <li><a href="#footer-contact">Kontakt oss</a></li>
-                    <li><a href="checkout.html">handklekurv</i></a></li>
-                </ul>   
+                    <!-- Handklekurven som ikon -->
+                    
+                </ul>
                 <ul class="icon-list">
-                    <li><a href="#"><img src="https://via.placeholder.com/24" alt="User Icon"></a></li>
-                    <li><a href="#"><img src="https://via.placeholder.com/24" alt="Heart Icon"></a></li>
-                    <li><a href="#"><img src="https://via.placeholder.com/24" alt="Cart Icon"></a></li>
+                    <li><a href="#"><i class="fa-regular fa-user"></i></a></li>
+                    <li><a href="#"><i class="fa-regular fa-heart"></i></a></li>
+                    <li>
+                        <a href="checkout.html">
+                            <i class="fa-solid fa-cart-shopping"></i>
+                        </a>
+                    </li>  
                 </ul>
             </nav>
         </header>
@@ -138,14 +143,15 @@
         <!-- Footer -->
         <footer id="footer-contact" class="global-footer">
             <section class="footer-logo">
-                <h3>Nettbutikk Logo</h3>
+                <h3>Logo</h3>
                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit</p>
             </section>
             <section class="footer-contact">
                 <h3>Kontakt</h3>
-                <p>Adresse: Gate 123 0977 Haugenstua</p>
-                <p>Telefon: +47 90 20 30 13</p>
-                <p>Email: Kontakt@Haugenstua.no</p>
+                <p> <i class="fa-solid fa-map-pin"></i> Adresse: Gate 123 0977 Haugenstua</p>
+                <p> <i class="fa-solid fa-phone"></i> Telefon: +47 90 20 30 13</p>
+                <p> <i class="fa-solid fa-envelope"></i> Email: Kontakt@Haugenstua.no</p>
+                <p>Åpningstider: Stenger 15:00</p>
             </section>
             <section class="footer-links">
                 <h3>Snarveier</h3>
@@ -158,10 +164,10 @@
             <section class="footer-social">
                 <h3>Sosiale medier</h3>
                 <ul>
-                    <li><a href="https://instagram.com">Instagram</a></li>
-                    <li><a href="https://facebook.com">Facebook</a></li>
-                    <li><a href="https://linkedin.com">Linkedin</a></li>
-                    <li><a href="https://pinterest.com">Pintrest</a></li>
+                    <li><a href="https://instagram.com"><i class="fa-brands fa-instagram"></i></a></li>
+                    <li><a href="https://facebook.com"><i class="fa-brands fa-square-facebook"></i></a></li>
+                    <li><a href="https://linkedin.com"><i class="fa-brands fa-linkedin"></i></a></li>
+                    <li><a href="https://pinterest.com"><i class="fa-brands fa-square-pinterest"></i></a></li>
                 </ul>
             </section>
         </footer>
