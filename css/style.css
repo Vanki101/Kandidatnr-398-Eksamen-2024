@@ -134,6 +134,8 @@ section {
     border-radius: 5px;
 }
 
+
+
 /* Filter knappene */ 
 .filter-list {
     display: flex;
@@ -186,7 +188,7 @@ section {
 .product-list {
     display: flex;
     flex-wrap: wrap; 
-    justify-content: center; 
+    justify-content: center;  
     gap: 1rem; 
     margin: 0 auto;
     padding: 1rem;
@@ -597,6 +599,7 @@ section {
     margin-bottom: 10px;
 }
 
+
 .personal-info p {
     font-size: 1rem;
     margin-bottom: 15px;
@@ -658,17 +661,18 @@ section {
     text-decoration: underline;
 }
 
-/* LEVERANSE seksjon */
 .delivery-options {
     margin: 20px 0;
     padding: 10px;
 }
+/* LEVERANSE seksjon   */
 
 .delivery-options h2 {
     font-size: 1.5rem;
     font-weight: bold;
     margin-bottom: 15px;
 }
+
 
 .delivery-options form {
     display: flex;
@@ -854,6 +858,7 @@ section {
 
 
 
+
 /* Media query for DESKTOP */
 @media (min-width: 200px) {
     body {
@@ -921,6 +926,7 @@ section {
 
     /* Forsiden */
     /*  Produktkort populære produkter */
+    
     .product-list {
         display: flex;
         flex-wrap: wrap;
@@ -941,11 +947,16 @@ section {
         text-align: center;
     }   
 
+}
+
+
+
     .product-grid{
         display: flex;
         flex-wrap: wrap ;
         gap: 10px;
     }
+
 
     /* KATEGORI GRID */
     .category-grid {
@@ -983,6 +994,7 @@ section {
 
 
 
+   
         /* PRODUKTSIDEN DESKTOP */
         .product-wrapper {
             flex-direction: column; 
@@ -999,6 +1011,7 @@ section {
             width: 100%; 
             max-width: 100%;
         }
+    
 
         /* CHECKOUT SIDEN FOR DESKTOP */
         /* Shoppingbag desktop */
@@ -1099,7 +1112,7 @@ section {
 
 
 
-    }
+    
     /* Anmeldese MÅ FÅ DETTE I DESKTOP MEDIA QUARRIES */
     @media (max-width: 768px) {
         .review-card {
