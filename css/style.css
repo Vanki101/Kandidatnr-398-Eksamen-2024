@@ -13,7 +13,8 @@ body {
 
 /* Container */
 .container {
-    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
     padding: 5px;
 }
 
@@ -110,7 +111,12 @@ body {
 .banner {
     background-color: #e0e0e0;
     padding: 20px;
+    width: 100%;
     text-align: right;
+}
+section {
+    width: 100%;
+    margin-bottom: 2rem;
 }
 
 .banner h1 {
@@ -128,6 +134,39 @@ body {
     border-radius: 5px;
 }
 
+
+
+/* Filter knappene */ 
+.filter-list {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+    list-style: none;
+    padding: 0;
+    margin: 0 0;
+}
+
+ .filter-list .filter-button {
+    flex: 0 1;
+    
+    display: inline-block;
+    padding: 10px 20px;
+    border: 2px solid black;
+    border-radius: 50px;
+    background: #f9f9f9;
+    text-decoration: none;
+    text-align: center;
+    color: black;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+}
+.filter-list .filter-button:hover {
+    background-color: black; /* Endre farge ved hover */
+    color: white;
+}
 /* Popular Products */
 .popular-products {
     margin: 20px 0;
@@ -146,60 +185,74 @@ body {
     color: #333;
 }
 
-/* Filter knappene */ 
-.filter-list {
-    display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap;
-    gap: 0px;
-    list-style: none;
-    padding: 0;
-    margin: 0 0 25px;
-}
-
- .filter-list .filter-button {
-    flex: 1;
-    max-width: 100px;
-    display: inline-block;
-    padding: 15px 30px;
-    border: 1px solid black;
-    background: none;
-    text-decoration: none;
-    text-align: center;
-    color: black;
-    font-size: 1rem;
-
-
-}
-
 .product-list {
     display: flex;
-    flex-direction: column;
-    gap: 20px;
+    flex-wrap: wrap; /* Allow wrapping to create rows */
+    justify-content: center; /* Center content */
+    gap: 1rem; /* Space between cards */
+    margin: 0 auto;
+    padding: 1rem;
+}
+/* Produktdetaljer */
+.product-details {
+    flex: 1 1 440px; /* Maks bredde for detaljseksjonen */
+    max-width: 440px;
+    margin-top: 10px;
+}
+
+.product-details h1 {
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-bottom: 10px;
+    color: #333;
+}
+
+.product-details p {
+    font-size: 1rem;
+    line-height: 1.5;
+    color: #555;
+    margin-bottom: 10px;
 }
 
 .product-card {
-    display: flex;
-    flex-direction: column;
+    flex: 1 1 calc(33.333% - 2rem); /* Each card takes up 1/3 of the row */
+    max-width: 350px; /* Max width for each card */
+    margin: 1rem; /* Margins around cards */
     border: 1px solid #ddd;
-    padding: 10px;
-    text-align: left;
+    border-radius: 5px;
+    background-color: #fff;
+    text-align: center;
 }
 
 .product-card img {
     width: 100%;
     height: auto;
+    border-radius: 5px;
     margin-bottom: 10px;
 }
 
-/* Popular Categories */
+.product-card h3 {
+    font-size: 1.2rem;
+    margin: 0.5rem 0;
+    color: #333;
+}
+
+.product-card .price {
+    font-weight: bold;
+    font-size: 1rem;
+    color: #000;
+    margin: 0.5rem 0;
+}
+
+
+/* Popular kategorier */
 .popular-categories {
     margin: 20px 0;
     padding: 0px;
-    text-align: left;
+    text-align: center;
 }
 .popular-categories h2 {
-    font-size: 1.2rem;
+    font-size: 1.5rem;
     font-weight: bold;
     margin-bottom: 10px;
 }
@@ -208,25 +261,55 @@ body {
     font-size: 1rem;
 }
 
-/* Kateogri styling */
-.category-list {
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
+/* Kateogri styling grid */
+.category-grid {
+    display: grid;
+    
+    justify-content: center;
+    gap: 2px;
 }
 
 .category-card {
+    background-size: cover;
+    background-position: center;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.2rem;
+    border-radius: 8px;
+    overflow: hidden;
     border: 1px solid black;
-    padding: 100px 30px;
     text-align: center;
-    margin-bottom: 20px;
+    
+
+    /* Spesifikk for hver boks */ 
+}
+.category-card:nth-child(1),
+.category-card:nth-child(2),
+.category-card:nth-child(3) {
+    flex: 1 1 calc(33.333% - 2rem); 
+    max-width: px; 
+    height: 200px; 
 }
 
+.category-card:nth-child(4) {
+    flex: 1 1 calc(66.666% - 2rem); 
+    max-width: 864px;
+    height: 300px;
+}
+
+.category-card:nth-child(5) {
+    flex: 1 1 calc(33.333% - 2rem); 
+    max-width: 300px;
+    height: 300px;
+}
 
 /* Anmeldeser */
 .reviews {
     margin: 20px 0;
     padding: 0px;
+    text-align: left;
     
 }
 
@@ -240,45 +323,45 @@ body {
 /* Review Grid */
 .review-grid {
     display: flex;
-    flex-direction: column; 
-    gap: 8px; 
+    flex-wrap: wrap; 
+    gap: 1px; 
+    justify-content: center;
+    margin: 0 auto;
+    max-width: 1200px;
 }
 
 /* ANMELDELSES KORT */
 .review-card {
-    display: flex;
-    flex-direction: column; 
-    align-items: flex-start; 
+    flex: 1 1 calc(25% - 1rem);
+    max-width: 289px;
     gap: 10px; 
-    /* mulig fjern */
     border: 1px solid #ddd;    
-    padding: 20px; 
-    border-radius: 5px; 
+    padding: 1rem; 
     background-color: #fff; 
     text-align: left; 
-    max-width: 800px; 
     margin: 0 auto; 
 }
 
 /* ANMELDESES BILDE*/
 .review-card img {
     width: 100%; 
-    max-width: 150px; 
-    height: auto; 
-    border-radius: 5px; 
+    max-width: 65px; 
+    margin-bottom: 1rem;
+    
+    
 }
 
 .review-card h3 {
-    margin: 0 0 10px 0; 
     font-size: 1.2rem; 
     font-weight: bold; 
     color: #333;
+    margin-bottom: 0.5rem;
 }
 
 .review-card p {
     margin: 0; 
-    font-size: 1rem; 
-    line-height: 1.5; 
+    font-size: 0.8rem; 
+    line-height: 1.3; 
     color: #555;
 }
 
@@ -316,12 +399,43 @@ body {
 
 
 /* Produktbilder */
-.product-images {
+.product-wrapper {
     display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 20px; 
+    margin: 20px auto;
+    max-width: 1200px; /* Maks bredde på hele seksjonen */
+}
+
+.product-images {
+    flex: 1 1 700px;
+    max-width: 700px;
     flex-direction: column;
     gap: 10px;
     margin-bottom: 20px;
 }
+/* Hovedbilde */
+.product-images figure:first-child {
+    width: 70%;
+    
+}
+
+/* Småbilder */
+.product-images figure:not(:first-child) {
+    display: inline-block;
+    width: 160px;
+    height: auto;
+}
+/* Småbilder */
+.product-images img {
+    width: 100%;
+    height: auto;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+
 .product-images img {
     width: 100%;
     height: auto;
@@ -353,7 +467,10 @@ body {
 /* Lignende produkter */
 
 .related-products {
-    margin-top: 30px;
+    margin: 20px auto;
+    padding: 20px 0;
+    text-align: center;
+    max-width: 1200px;
 }
 
 .related-products h2 {
@@ -361,11 +478,26 @@ body {
     font-weight: bold;
     margin-bottom: 20px;
 }
+/* Grid for produktkort */
+.related-products-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* Responsivt rutenett */
+    gap: 20px; 
+    justify-items: center;
+}
+
 .related-products article {
-    display: flex;
-    flex-direction: column;
-    text-align: left;
-    margin-bottom: 10px;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    padding: 10px;
+    text-align: center;
+    max-width: 350px; /* Begrens kortbredde */
+    transition: transform 0.2s ease;
+}
+
+.related-products article:hover {
+    transform: scale(1.05); /* Zoom-effekt på hover */
 }
 
 
@@ -376,22 +508,22 @@ body {
     margin-bottom: 15px;
 }
 
-.related-products .product-card img {
+.related-products img {
     width: 100%;
     height: auto;
     margin-bottom: 10px;
-    max-width: 10px;
 }
 
-.related-products .product-card h3 {
-    font-size: 1rem;
+.related-products h3 {
+    font-size: 1.2rem;
     font-weight: bold;
-    margin-bottom: 5px;
+    margin-bottom: 10px;
+    color: #333;
 }
 
-.related-products .product-card p {
-    font-size: 0.9rem;
-    color: gray;
+.related-products p {
+    font-size: 1rem;
+    color: #555;
 }
 
 
@@ -585,12 +717,11 @@ width: 60px
 
 
 /* Media query for større skjermer */
-@media (min-width: 1200px) {
+@media (min-width: 810px) {
     body {
         max-width: 1200px; /* Setter maks bredde */
-        margin: 0 auto; /* Sentrerer siden */
+        margin: 0 auto; 
     }
-
         /* Header Desktop */
     .global-header {
         display: flex; 
@@ -650,6 +781,110 @@ width: 60px
         text-decoration: none; 
     }
 
+    /* Forsiden */
+    /*  Produktkort populære produkter */
+    
+    .product-list {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        max-width: 1200px;
+        gap: 1rem;
+        margin: 0 auto;
+    }
+    
+    .product-card {
+        flex: 1 1 calc(33.333% - 2rem); 
+        max-width: 350px; 
+        margin: 1rem; 
+        padding: 1rem;
+        border: 1px solid #ddd;
+        border-radius: 5px;
+        background-color: #fff;
+        text-align: center;
+    }   
+
+}
+
+
+
+
+    /* KATEGORI GRID  */
+    @media (min-width: 200px) {
+    .category-grid {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 1.5px;
+        justify-content: center; 
+    }
+    .category-card:nth-child(1),
+    .category-card:nth-child(2),
+    .category-card:nth-child(3) {
+        flex: 1 1 386px; 
+        max-width: 386px;
+      
+        background-size: cover; 
+        background-position: center; 
+    }
+
+    .category-card:nth-child(4) {
+        flex: 1 1 864px; 
+        max-width: 864px;
+    
+        background-size: cover;
+        background-position: center;
+    }
+
+    .category-card:nth-child(5) {
+        flex: 1 1 300px; 
+        max-width: 300px;
+
+        background-size: cover;
+        background-position: center;
+    }
+}
+
+
+    /* Anmeldese */
+    @media (max-width: 768px) {
+        .review-card {
+            flex: 1 1 100%; /* Kortene tar opp hele bredden */
+            max-width: 100%; /* Hindrer breddebegrensning */
+        }
+    
+        .review-grid {
+            gap: 0.5rem; /* Reduserer mellomrom mellom kortene */
+        }
+    }
+
+    /* Produktsiden Desktop */
+
+    @media (max-width: 200px) {
+        .product-wrapper {
+            flex-direction: column; 
+        }
+    
+        .product-images,
+        .product-details {
+            flex: 1 1 100%; /* Full bredde for mobil */
+            max-width: 100%; 
+            margin: 0; 
+        }
+    
+        .product-images figure:not(:first-child) {
+            width: 100%; /* Gjør småbildene også brede */
+            max-width: 100%;
+        }
+    }
+    
+
+
+
+
+
+
+
+
     /* Footer desktop */
    .global-footer {
     display: flex;
@@ -658,7 +893,7 @@ width: 60px
     gap: 20px;
    }
 
-   /* Logo  */
+   /* Footer Logo  */
    .global-footer section:first-of-type {
     width: 100%;
     text-align: left;
@@ -672,7 +907,7 @@ width: 60px
     
    }
 
-    }
+    
 
 
     
