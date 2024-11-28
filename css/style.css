@@ -83,7 +83,7 @@ body {
 }
 /* Logo */
 .nav-list li:nth-child(3) a {
-    font-size: 1.5rem;
+    font-size: 2rem;
     font-weight: bold;
     line-height: 1;
   
@@ -254,7 +254,7 @@ body {
 /* Popular Products */
 .product-card {
     position: relative;
-    background: white;
+    background: none;
     border-radius: 15px;
     overflow: hidden;
 }
@@ -275,9 +275,7 @@ body {
     position: absolute;
     top: 15px;
     right: 15px;
-    background: white;
-    border: none;
-    border-radius: 50%;
+    border-radius: 10px;
     width: 35px;
     height: 35px;
     display: flex;
@@ -471,8 +469,10 @@ body {
 
 /* Produkt siden */
 /* Brødsmulesti */
+
 .breadcrumb {
     margin: 10px 0;
+    margin-left: 20px;
 }
 
 .breadcrumb ol {
@@ -504,109 +504,299 @@ body {
 
 /* Produktbilder */
 .product-wrapper {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    gap: 20px; 
-    margin: 20px auto;
-    max-width: 1200px; 
+    display: grid;
+    grid-template-columns: 100px 1fr;
+    gap: 20px;
+    padding: 20px;
+}
+.product-gallery {
+    grid-column: 1 / -1;
+    display: grid;
+    grid-template-columns: 100px 1fr;
+    gap: 20px;
 }
 
-.product-images {
-    flex: 1 1 700px;
-    max-width: 700px;
-    flex-direction: column;
+.thumbnail-images {
+    display: grid;
+    grid-template-rows: repeat(3, 100px);
     gap: 10px;
-    margin-bottom: 20px;
 }
-/* Hovedbilde */
-.product-images figure:first-child {
-    width: 70%;
+
+.thumbnail-images figure {
+    margin: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.thumbnail-images img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 4px;
+}
+
+.main-image {
+    margin: 0;
+    height: 320px;
+   
     
 }
 
-/* Småbilder */
-.product-images figure:not(:first-child) {
-    display: inline-block;
-    width: 160px;
-    height: auto;
-}
-/* Småbilder */
-.product-images img {
+.main-image img {
     width: 100%;
-    height: auto;
-    border: 1px solid #ddd;
-    border-radius: 5px;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 4px;
 }
 
-
-.product-images img {
-    width: 100%;
-    height: auto;
-    border: 1px solid #ddd;
+.product-header h1 {
+     font-size: 1.5rem;
+    margin-bottom: 0px;
+    text-align: left;
 }
 
-
-/* Lignende produkter */
-
-.related-products {
-    margin: 20px auto;
-    padding: 20px 0;
-    text-align: center;
-    max-width: 1200px;
+.product-details {
+    margin-top: 20px;
 }
 
-.related-products h2 {
+.product-details h1 {
     font-size: 1.5rem;
+    margin-bottom: 10px;
+    text-align: left;
+}
+.product-info-product {
+    grid-column: 1 / -1;
+    padding: 20px 0;
+}
+
+.brand {
+    color: #666;
+    margin-bottom: 10px;
+}
+
+.price {
+    display: block;
+    font-size: 1.1rem;
     font-weight: bold;
+    margin-bottom: 15px;
+    float: none;
+}
+
+.color {
     margin-bottom: 20px;
 }
-/* Grid for produktkort */
-.related-products-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* Responsivt rutenett */
-    gap: 20px; 
-    justify-items: center;
+.product-form {
+    margin-bottom: 40px;
 }
 
-.related-products article {
-    background-color: #f9f9f9;
-    border: 1px solid #f9f9f9;
-    border-radius: 5px;
+.product-form select {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    margin-bottom: 10px;
+}
+
+.product-actions {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 20px 0;
+}
+.add-to-cart {
+    flex: 1;
+    padding: 15px;
+    border: 1px solid #000;
+    border: none;
+    border-radius: 4px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.add-to-cart button {
+    flex: 1;
+    align-items: center;
+    padding: 15px;
+    border: solid 1px black;
+}
+
+.wishlist {
+    width: 45px;
+    background: white;
+    border: 1px solid #000;
+    border-radius: 4px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.accordion {
+    border-top: 1px solid #000;
+    margin: 0;
+    padding: 20px 0;
+}
+
+.accordion summary {
+    padding: 15px 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+    list-style: none;
+}
+
+.accordion summary::after {
+    content: '+';
+    font-size: 1.2rem;
+}
+
+.accordion[open] summary::after {
+    content: '-';
+}
+
+.accordion-content {
+    padding: 20px 0;
+}
+.accordion-content ul  {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+.accordion-content ul li {
+    padding: 2% 0;
+}
+
+.accordion-content table {
+    width: 100%;
+    border-collapse: collapse ;
+    margin: 10px 0;
+}
+
+
+.accordion-content table th,
+.accordion-content table td {
     padding: 10px;
     text-align: center;
-    max-width: 350px; 
-    transition: transform 0.2s ease;
+    border-bottom: 1px solid #eee;
 }
 
-.related-products article:hover {
-    transform: scale(1.05); 
-}
-
-
-.related-products .product-card {
-    border: 1px solid #ddd;
-    padding: 15px;
-    text-align: left;
-    margin-bottom: 15px;
-}
-
-.related-products img {
-    width: 100%;
-    height: auto;
-    margin-bottom: 10px;
-}
-
-.related-products h3 {
-    font-size: 1.2rem;
+.accordion-content table th {
     font-weight: bold;
-    margin-bottom: 10px;
     color: #333;
 }
 
-.related-products p {
+.accordion {
+    border-top: 1px solid #000;
+    padding: 20px 0;
+}
+
+.accordion summary {
+    padding: 15px 0;
+    margin-bottom: 10px;
+}
+.product-actions-heart {
+   
+ 
+    
+    border-radius: 4px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: white;
+    cursor: pointer;
+}
+.product-actions-heart {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    
+}
+
+
+
+
+.related-products {
+    padding: 20px;
+}
+
+.products-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.products-header h2 {
+    font-size: 1.8rem;
+}
+
+.products-header a {
+    color: #6B4CE6;
+    text-decoration: none;
+    
+}
+
+.products-scroll {
+    display: flex;
+    overflow-x: auto;
+    gap: 20px;
+    padding: 10px 0;
+    scroll-snap-type: x mandatory;
+    -webkit-overflow-scrolling: touch;
+}
+
+.product-card {
+    flex: 0 0 250px;
+    scroll-snap-align: start;
+    position: relative;
+}
+
+.wishlist-button {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    background: white;
+    border: none;
+    border-radius: 50%;
+    width: 35px;
+    height: 35px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    z-index: 1;
+}
+
+.product-card img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+
+.product-meta {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 10px 0;
+}
+
+.product-meta h3 {
     font-size: 1rem;
-    color: #555;
+    margin: 0;
+}
+
+.product-rating {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.stars {
+    color: #000;
+}
+
+.products-scroll::-webkit-scrollbar {
+    display: none;
 }
 
 
@@ -682,7 +872,6 @@ h1 {
 }
 
 .product-actions button {
-    background: none;
     border: none;
     padding: 5px;
     cursor: pointer;
@@ -1060,7 +1249,7 @@ h1 {
 /* Media query for DESKTOP */
 @media (min-width: 786px) {
     body {
-        max-width: 1200px; /* Setter maks bredde */
+        max-width: 1920px; /* Setter maks bredde */
         margin: 0 auto; 
     }
         /* Header Desktop */
@@ -1213,7 +1402,7 @@ h1 {
 
     .wishlist-button {
         top: 15px;
-        padding: px;
+        padding: 2px;
         
     }
     
@@ -1287,6 +1476,78 @@ h1 {
         transition: transform 0.3s ease;
     }
 
+
+    /* PRODUKTSIDEN DEKSTOP  */
+    .product-wrapper {
+        display: grid;
+        grid-template-columns: 2fr 1fr;
+        gap: 40px;
+        margin: 0 auto;
+        padding: 40px 20px;
+    }
+
+    .product-gallery {
+        grid-column: 1;
+        display: grid;
+        grid-template-columns: 100px 1fr;
+        gap: 20px;
+    }
+    .product-info-product {
+        grid-column: 2;
+        padding: 0;
+        max-width: 400px;
+    }
+    .product-header h1 {
+        font-size: 1.3rem;
+        margin-bottom: 10px;
+    }
+    .product-form {
+        margin: 20px 0;
+    }
+
+    .product-form select {
+        width: 100%;
+        margin-bottom: 15px;
+    }
+
+    .accordion {
+        padding: 15px 0;
+    }
+
+    .product-content {
+        grid-column: 2;
+        max-width: 400px;
+        
+    }
+
+    .thumbnail-images {
+        display: grid;
+        grid-template-rows: repeat(3, 235px);
+        gap: 10px;
+    }
+
+    .main-image {
+        height: 725px;
+       
+    }
+
+    .product-info {
+        margin-top: 0;
+        padding: 0 20px;
+        max-width: 400px;
+    }   
+    .product-form {
+        margin: 20px 0;
+    }
+    .product-gallery {
+        display: grid;
+        grid-template-columns: 30% 70%;
+        gap: 15px;
+        grid-auto-rows: 15.9px;
+        height: 600px;
+    }
+    
+
     /* CHECKOUT SIDEN FOR DESKTOP */
         /* Shoppingbag desktop */
        .shopping-bag h2 {
@@ -1337,9 +1598,58 @@ h1 {
         .product-actions {
             display: flex;
             flex-direction: column;
-            gap: 15px;
+            gap: 10px;
             margin-left: auto;
-            margin-right: 260px;
+            
+        }
+        .product-actions-heart {
+            display: flex;
+            gap: 10px;
+            align-items: center;
+        }
+        .accordion {
+            border-top: 1px solid #000;
+            padding: 15px 0;
+        }
+        .product-actions {
+            display: flex;
+            gap: 10px;
+            margin: 20px 0;
+        }
+        
+        .add-to-cart {
+            flex: 1;
+            padding: 15px;
+            
+            color: #000;
+            border: none;
+            border-radius: 4px;
+        }
+        
+        .wishlist {
+            width: 45px;
+            height: 45px;
+            background: white;
+            border: 1px solid #000;
+            border-radius: 4px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        .wishlist i {
+            font-size: 1.5rem;
+        }
+        .product-actions-heart i {
+            width: 45px;
+            height: 45px;
+            border: 1px solid #000;
+            border-radius: 4px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: white;
+            cursor: pointer;
         }
         
         
