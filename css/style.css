@@ -1,4 +1,3 @@
-/* Global Reset */
 * {
     margin: 0;
     padding: 0;
@@ -21,7 +20,7 @@ body {
 /* Mobil-stil */
 .global-header {
     display: flex;
-    flex-direction: column; /* For mobil: Elementer ligger under hverandre */
+    flex-direction: column; 
     align-items: center;
     gap: 30px;
     padding: 10px;
@@ -104,105 +103,58 @@ body {
 
 
 /* Forside skesjonen */
-/* Banner */
 .banner {
+    width: 100%;
     position: relative;
-    display: flex;
-    align-items: center;
-    justify-content: center;
     overflow: hidden;
-    padding: 40px 20px;
-    height: 60vh;       
-    border-radius: 15px;
-    margin: 20px 0;
-    width: 100%;
+}
+.left-arrow,
+.right-arrow {
+    display: none;
+    opacity: 0;
+}
+
+.slide-1 {
+    background-size: cover;
+    height: 500px;
+    color: black;
+    background-color: rgb(185, 178, 178);
+    padding: 10%;
+    font-size: large;
+    margin-bottom: 10px;
+    border-radius: 25px;
     text-align: right;
-    background-size: cover;
-    background-position: center;
-    background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), 
-}.slide {
-    position: absolute;
+    position: relative;
+    padding-left: 10%;
     width: 100%;
-    height: 100%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    padding: 40px;
-    text-align: left;
 }
-.slide h2 {
+
+.slide-2 {
+    display: none;
+}
+
+.slide-1 h2,
+.slide-2 h2,
+.slide-1 p,
+.slide-2 p {
     color: white;
-    font-size: 1.8rem;
-    margin-bottom: 15px;
-    max-width: 400px;
-    line-height: 1.2;
 }
 
-.slide p {
-    color: white;
-    margin-bottom: 20px;
-    max-width: 300px;
-    line-height: 1.4;
-}
-
-.banner .slide {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: flex-start;
-    padding: 20px;
-    text-shadow: 0px 0px 5px rgba(0, 0, 0, 0.5);
-    background-size: cover;
-    background-position: center;
-    transition: opacity 0.5s ease-in-out;
-}
-.banner .slide:nth-child(1) {
-    background-image: url('https://cdn.pixabay.com/photo/2015/04/23/22/00/tree-736885_1280.jpg'); 
-}
-
-.banner .slide:nth-child(2) {
-    background-image: url('https://cdn.pixabay.com/photo/2016/11/29/12/54/fashion-1866571_1280.jpg');
-    opacity: 0; 
-    pointer-events: none; 
-}
-
-.banner .slide:nth-child(3) {
-    background-image: url('https://cdn.pixabay.com/photo/2015/03/26/09/54/makeup-690754_1280.jpg');
-    opacity: 0; 
-    pointer-events: none; 
-}
-
-
-
-/* Banner knappen "les mer" */
-.banner .banner-button {
-    margin-top: 20px;
+.banner-button {
     display: inline-block;
-    padding: 10px 25px;
+    padding: 17px 20px;
     background-color: white;
     color: black;
+    border-radius: 1000px;
     text-decoration: none;
-    border-radius: 4px;
-    font-size: 1rem;
-    transition: all 0.3s ease;
-    border-radius: 30px;
-}
-.banner .banner-button:hover {
-    background-color: #000;
-    color: #fff;
-}
-.slider-nav {
-    position: absolute;
-    bottom: 20px;
-    left: 50%;
-    transform: translateX(-50%);
-    display: flex;
-    gap: 10px;
+    font-weight: bold;
+    font-size: 20px;
 }
 
+.banner-button:hover {
+    background-color: #030303;
+    color: white;
+}
 
 
 
@@ -242,7 +194,7 @@ body {
     font-size: 1rem;
     cursor: pointer;
     transition: all 0.3s ease-in-out;
-    white-space: nowrap;  /* Holder teksten på én linje */
+    white-space: nowrap;  
 }
 
 
@@ -252,6 +204,21 @@ body {
     color: white;
 }
 /* Popular Products */
+
+.popular-products-h2 {
+    font-size: 1.8rem;
+    margin-bottom: 15px;
+    text-align: center;
+}
+
+.popular-products-p {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #666;
+}
+
+
+
 .product-card {
     position: relative;
     background: none;
@@ -271,11 +238,11 @@ body {
     border-radius: 15px;
 }
 
-.wishlist-button {
+.wishlist-button-index {
     position: absolute;
     top: 15px;
     right: 15px;
-    border-radius: 10px;
+    border-radius: 50%;
     width: 35px;
     height: 35px;
     display: flex;
@@ -288,6 +255,8 @@ body {
 /* Product info container */
 .product-link {
     padding: 10px;
+   
+    
 }
 
 .product-card h3 {
@@ -296,7 +265,7 @@ body {
     margin: 10px 0 5px 0;
 }
 
-.price {
+.price-index {
     float: right;
     font-weight: bold;
     margin: 10px 0;
@@ -382,27 +351,30 @@ body {
     background-size: cover;
     background-position: center;
 }
+.category-card:nth-child(3) {
+    grid-row: span 37;
+}
 
 /* Spesifikke bilder for hver kategori */
 .category-card:nth-child(1) {
-    background-image: url('../Images/canyon-9215914_1280.jpg');
+    background-image: url('../Images/monkey-6952630_1280.jpg');
 }
 
 .category-card:nth-child(2) {
-    background-image: url('../Images/canyon-9215914_1280.jpg');
+    background-image: url('../Images/skyscraper-9226515_1280.jpg');
 }
 
 .category-card:nth-child(3) {
-    background-image: url('../Images/canyon-9215914_1280.jpg');
+    background-image: url('../Images/santa-7667744_1280.jpg');
     
 }
 
 .category-card:nth-child(4) {
-    background-image: url('../Images/canyon-9215914_1280.jpg');
+    background-image: url('../Images/fashion-7775824_1280.jpg');
 }
 
 .category-card:nth-child(5) {
-    background-image: url('../Images/canyon-9215914_1280.jpg');
+    background-image: url('../Images/sky-8763986_1280.jpg');
 }
 
 /* Anmeldeser */
@@ -574,7 +546,7 @@ body {
     margin-bottom: 10px;
 }
 
-.price {
+.price-product {
     display: block;
     font-size: 1.1rem;
     font-weight: bold;
@@ -597,20 +569,20 @@ body {
     margin-bottom: 10px;
 }
 
-.product-actions {
+.product-actions-product {
     display: flex;
     gap: 10px;
-    margin-bottom: 20px 0;
+    margin: 20px 0;
+    width: 100%;
+   
 }
 .add-to-cart {
     flex: 1;
     padding: 15px;
-    border: 1px solid #000;
+    color: rgb(0, 0, 0);
     border: none;
     border-radius: 4px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    text-align: center;
 }
 
 .add-to-cart button {
@@ -620,15 +592,8 @@ body {
     border: solid 1px black;
 }
 
-.wishlist {
-    width: 45px;
-    background: white;
-    border: 1px solid #000;
-    border-radius: 4px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
+
+
 
 .accordion {
     border-top: 1px solid #000;
@@ -694,22 +659,45 @@ body {
     padding: 15px 0;
     margin-bottom: 10px;
 }
+.accordion-review {
+    border-top: 1px solid #000;
+    padding: 15px 0;
+}
+
+.accordion-review summary {
+    padding: 15px 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+    list-style: none;
+}
+
+.accordion-review summary::after {
+    font-size: 1.2rem;
+}
+
+
 .product-actions-heart {
-   
- 
-    
+    display: flex;
+    width: 100%;
+    gap: 10px;
+}
+.product-actions-heart {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+.product-actions-heart i {
+    width: 45px;
+    height: 45px;
+    border: 1px solid #000;
     border-radius: 4px;
     display: flex;
     align-items: center;
     justify-content: center;
     background: white;
     cursor: pointer;
-}
-.product-actions-heart {
-    display: flex;
-    gap: 10px;
-    align-items: center;
-    
 }
 
 
@@ -751,20 +739,18 @@ body {
     position: relative;
 }
 
-.wishlist-button {
+.wishlist-button-product {
     position: absolute;
     top: 15px;
     right: 15px;
-    background: white;
-    border: none;
     border-radius: 50%;
     width: 35px;
     height: 35px;
     display: flex;
     align-items: center;
     justify-content: center;
-    cursor: pointer;
     z-index: 1;
+    cursor: pointer;
 }
 
 .product-card img {
@@ -798,7 +784,6 @@ body {
 .products-scroll::-webkit-scrollbar {
     display: none;
 }
-
 
 /* Checkout siden */
 /* Shopping baggen */
@@ -839,7 +824,7 @@ h1 {
     margin: 0;
 }
 
-.price {
+.price-checkout {
     font-weight: bold;
     margin: 0;
 }
@@ -857,13 +842,15 @@ h1 {
     margin-top: 10px;
 }
 
-.product-options select,
+.product-options select, 
 .product-options input {
     padding: 8px;
     border: 1px solid #ddd;
     border-radius: 4px;
-    background: #fff;
+   
 }
+
+
 
 .product-actions {
     display: flex;
@@ -952,8 +939,6 @@ h1 {
 .personal-info .cancel {
     display: block;
     text-align: center;
-    color: #666;
-    text-decoration: none;
     margin-top: 10px;
 }
 .contact-info {
@@ -978,7 +963,7 @@ h1 {
 
 
 
-/* LEVERANSE seksjon   */
+/* LEVERANSE seksjon*/
 .delivery-options {
     background-color: #fff;
     border: 1px solid #eee;
@@ -1088,7 +1073,6 @@ h1 {
     flex-direction: column;
     gap: 0px;
 }
-
 .payment label {
     display: block;
     font-weight: bold;
@@ -1104,9 +1088,7 @@ h1 {
 .card-details {
     display: flex;
     flex-direction: column;
-    margin-bottom: 20px;
-   
-    border-bottom: 1px solid #eee;
+    margin-bottom: 20px;    
 }
 
 .payment p {
@@ -1163,7 +1145,6 @@ h1 {
     width: auto;
     margin: 0;
 }
-
 
 /*globale Footer */
 .global-footer {
@@ -1246,11 +1227,11 @@ h1 {
 
 
 
-/* Media query for DESKTOP */
-@media (min-width: 786px) {
+    /* Media query for DESKTOP, setter min width for smartbrett */
+    @media (min-width: 1024px) { 
     body {
-        max-width: 1920px; /* Setter maks bredde */
-        margin: 0 auto; 
+    max-width: 1200px; 
+    margin: 0 auto; 
     }
         /* Header Desktop */
     .global-header {
@@ -1314,36 +1295,65 @@ h1 {
     /* Forsiden */
     /* banner */
     .banner {
+        display: flex;
+        overflow-x: scroll;
+        scroll-snap-type: x mandatory;
+        gap: 2%;
+    }
+
+    .slide-1,
+    .slide-2 {
+        flex: 0 0 100%;
+        scroll-snap-align: start;
+        display: block;
+    }
+
+    .slide-2 {
+        background-size: cover;
         height: 500px;
-        margin: 40px auto;
-    }
-    .slide {
-        padding: 60px;
-        align-items: flex-end;
+        background-color: rgb(185, 178, 178);
+        padding: 10%;
+        font-size: large; 
+        border-radius: 25px;
         text-align: left;
+        padding-right: 15%;
+        flex: 0 0 auto;
+        width: 100%;
+        }
+        .slider-2 h2 {
+        color: white;
+        }
+        .slider-2 p {
+            color: white;
+         }
+         .left-arrow,
+    .right-arrow {
+        display: block;
+        background-color: rgb(255, 255, 255);
+        font-size: 20px;
+        padding: 15px;
+        border-radius: 50%;
+        opacity: 0.6;
+        position: absolute;
+        top: 45%;
+        cursor: pointer;
+        z-index: 2;
+        transition: opacity 0.3s ease;
     }
-    .slide h2 {
-        font-size: 2.5rem;
-        max-width: 600px;
+
+    .left-arrow:hover,
+    .right-arrow:hover {
+        opacity: 1;
     }
 
-    .slide p {
-        max-width: 400px;
+    .left-arrow {
+        left: 1%;
     }
-    
-    
 
-
-
-
-
-
-
-
-
-    /* KORT HEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEER */
+    .right-arrow {
+        right: 1%;
+    }
     /*  populære produkter */
-    
     .product-grid {
         display: grid;
         grid-template-columns: repeat(3, 1fr);
@@ -1400,7 +1410,7 @@ h1 {
         font-size: 0.8rem;
     }
 
-    .wishlist-button {
+    .wishlist-button-index {
         top: 15px;
         padding: 2px;
         
@@ -1472,12 +1482,17 @@ h1 {
     }
 
     .review-card {
-        min-width: 289px;
+        max-width: 289px;
         transition: transform 0.3s ease;
     }
 
 
     /* PRODUKTSIDEN DEKSTOP  */
+    .breadcrumb {
+        margin-top: 20px;
+    }
+
+
     .product-wrapper {
         display: grid;
         grid-template-columns: 2fr 1fr;
@@ -1547,7 +1562,6 @@ h1 {
         height: 600px;
     }
     
-
     /* CHECKOUT SIDEN FOR DESKTOP */
         /* Shoppingbag desktop */
        .shopping-bag h2 {
@@ -1560,6 +1574,22 @@ h1 {
         .shopping-bag {
             align-items: center;
         }
+        .continue-shopping {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            text-decoration: none;
+            color: #6B4CE6;
+            padding: 10px 0;
+        }
+        
+        .continue-shopping i {
+            font-size: 0.9rem;
+        }
+        
+        .continue-shopping:hover {
+            text-decoration: underline;
+        }
         .product-card-checkout {
             flex-direction: row;
             align-items: center;
@@ -1569,32 +1599,26 @@ h1 {
             margin-top: 20px;
             
         }
-    
         .product-card-checkout img {
-            align-items: right;
             width: 200px;
             height: auto;
             margin-left: 200px;
         }
-    
         .product-info {
             flex: 1;
             display: flex;
             flex-direction: column;
             gap: 10px;
         }
-    
         .product-options {
             display: flex;
             align-items: center;
             gap: 20px;
         }
-    
         .product-options select,
         .product-options input {
             width: 80px;
         }
-    
         .product-actions {
             display: flex;
             flex-direction: column;
@@ -1620,13 +1644,11 @@ h1 {
         .add-to-cart {
             flex: 1;
             padding: 15px;
-            
             color: #000;
             border: none;
             border-radius: 4px;
         }
-        
-        .wishlist {
+        .wishlist-checkout {
             width: 45px;
             height: 45px;
             background: white;
@@ -1637,7 +1659,7 @@ h1 {
             justify-content: center;
         }
         
-        .wishlist i {
+        .wishlist-checkout i {
             font-size: 1.5rem;
         }
         .product-actions-heart i {
@@ -1651,14 +1673,14 @@ h1 {
             background: white;
             cursor: pointer;
         }
-        
-        
+       
         
         /* OPPLYSNINGER SEKSJONEN */
 
         .personal-info {
             margin: 0 auto;    
             margin-top: 20px;
+            margin-bottom: 20px;
         }
         .personal-info h2 {
           align-items: center;
@@ -1674,6 +1696,7 @@ h1 {
         .delivery-address {
             max-width: 800px;
             margin: 0 auto;
+            margin-bottom: 20px;
             
         }
         
@@ -1733,11 +1756,11 @@ h1 {
         }
     
         .delivery-box {
-            position: relative;  /* For å posisjonere prisen */
+            position: relative;  
         }
     
         .delivery-info-order {
-            max-width: 80%;  /* Gir plass til pris på høyre side */
+            max-width: 80%;  
         }
     
         .price {
@@ -1788,9 +1811,32 @@ h1 {
                 margin-bottom: 0;
         
             }
-            .card-details input {
+                .card-details input {
                 width: 100%;
-            }   
+            }         
+            
+                /* FOOTER DESKTOP */
+                .global-footer {
+                    display: flex;
+                    max-width: 1200px;
+                    margin: 0 auto;
+                    gap: 20px;
+                }
+
+                /* Footer Logo  */
+                .global-footer section:first-of-type {
+                    width: 100%;
+                    text-align: left;
+                }
+                .global-footer section:not(:first-of-type) {
+                    display: flex;
+                    flex: 1;
+                    flex-direction: column;
+                    text-align: left;
+                    gap: 10px;
+                    
+                }
+
 
 }
 
@@ -1814,22 +1860,7 @@ h1 {
 
         
    
-        /* PRODUKTSIDEN DESKTOP */
-        .product-wrapper {
-            flex-direction: column; 
-        }
-    
-        .product-images,
-        .product-details {
-            flex: 1 1 100%; 
-            max-width: 100%; 
-            margin: 0; 
-        }
-    
-        .product-images figure:not(:first-child) {
-            width: 100%; 
-            max-width: 100%;
-        }
+        
     
 
         
@@ -1875,27 +1906,7 @@ h1 {
 
 
 
-   /* FOOTER DESKTOP */
-   .global-footer {
-    display: flex;
-    max-width: 1200px;
-    margin: 0 auto;
-    gap: 20px;
-   }
-
-   /* Footer Logo  */
-   .global-footer section:first-of-type {
-    width: 100%;
-    text-align: left;
-   }
-   .global-footer section:not(:first-of-type) {
-    display: flex;
-    flex: 1;
-    flex-direction: column;
-    text-align: left;
-    gap: 10px;
-    
-   }
+   
 
 
 
@@ -1904,17 +1915,7 @@ h1 {
 
 
     
-    /* Anmeldese MÅ FÅ DETTE I DESKTOP MEDIA QUARRIES */
-    @media (max-width: 768px) {
-        .review-card {
-            flex: 1 1 100%; 
-            max-width: 100%; 
-        }
     
-        .review-grid {
-            gap: 0.5rem; 
-        }
-    }
 
 
 
